@@ -3,25 +3,16 @@ import {  useState } from 'react'
 import '../sass/App.scss';
 import { scriptMeetTheWeaver } from '../data/textData';
 import StoryText from '../components/StoryText';
-import styled from 'styled-components';
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
 
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-background-color: transparent;
-align-items: l;
-justify-content:left;
-height:100vh;
-`;
+
 
 const MeetTheWeaver = () => {
 
 
   let scriptLength:number = scriptMeetTheWeaver.length;
   const [temp, setTemp]= useState ([scriptMeetTheWeaver[0]]);
-  const [waiting, setWaiting]= useState (false);
   const [disabled, setDisabled]= useState (false);
   const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
  

@@ -4,7 +4,6 @@ import StoryText from '../components/StoryText'
 /*import { nonBinaryAudio } from '../data/backgroundAudioData'
 import { nonBinaryEndingTwoTextTiming } from '../data/textTimingData'
 import StoryTextAuto from '../components/StoryTextAuto'*/
-import { textTiming } from '../types'
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
 
 
