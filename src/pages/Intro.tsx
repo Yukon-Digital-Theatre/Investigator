@@ -9,6 +9,7 @@ const dispatch= useDispatch();
 const [style, setStyle] = useState(false)
 
 function helper(){
+  setStyle(true);
   setTimeout(() => {
     dispatch(updatePage("TitlePage"));
 
