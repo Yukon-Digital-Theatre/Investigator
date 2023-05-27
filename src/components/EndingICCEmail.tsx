@@ -2,7 +2,9 @@ import React from 'react'
 
 const EndingICCEmail = () => {
   return (
-    <div>Email from Representative of the Family
+    <div className='lettercontainer'>
+    
+    <div className='introText letter'>Email from Representative of the Family
     Subject: Information on Weaver #11
     Hello Investigator,
     
@@ -17,6 +19,7 @@ As you can imagine, they are very anxious for any updates on the trial, but most
 Thank you for your time and attention,
 
 Samharan Prisoners’ Rights Association
+</div>
 </div>
   )
 }
