@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Investigator/static/css/main.2f470956.css",
+    "main.js": "/Investigator/static/js/main.ba24351a.js",
+    "static/media/LOOP 2 MEET THE WEAVER.wav": "/Investigator/static/media/LOOP 2 MEET THE WEAVER.29013ddc68baf89166cd.wav",
+    "static/media/LOOP 1 PRESTORY.wav": "/Investigator/static/media/LOOP 1 PRESTORY.8311264442cf0dac9f56.wav",
+    "static/media/LOOP 4 GETTING ICKY.wav": "/Investigator/static/media/LOOP 4 GETTING ICKY.d3777344709a245648ed.wav",
+    "static/media/LOOP 5 FULL ON ICKY.wav": "/Investigator/static/media/LOOP 5 FULL ON ICKY.2e399686fa5ea9750103.wav",
+    "static/media/LOOP 7 ENDING.wav": "/Investigator/static/media/LOOP 7 ENDING.db6944211f6467c269ae.wav",
+    "static/media/LOOP 6 GUILTY OR NOT.wav": "/Investigator/static/media/LOOP 6 GUILTY OR NOT.01628f3d72ec928ae1f5.wav",
+    "static/media/LOOP 3 CAT AND MOUSE.wav": "/Investigator/static/media/LOOP 3 CAT AND MOUSE.7c9242c52ff3f0c3630c.wav",
+    "index.html": "/Investigator/index.html",
+    "static/media/lni_lni-chevron-right.svg": "/Investigator/static/media/lni_lni-chevron-right.829d5b643f0f56c1e54868dcce4d12bb.svg",
+    "main.2f470956.css.map": "/Investigator/static/css/main.2f470956.css.map",
+    "main.ba24351a.js.map": "/Investigator/static/js/main.ba24351a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f470956.css",
+    "static/js/main.ba24351a.js"
+  ]
+}
