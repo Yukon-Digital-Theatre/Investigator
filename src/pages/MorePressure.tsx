@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { scriptMorePressure } from '../data/textData'
 import StoryText from '../components/StoryText'
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
@@ -8,7 +8,6 @@ const MorePressure = () => {
   
   let scriptLength:number = scriptMorePressure.length;
   const [temp, setTemp]= useState ([scriptMorePressure[0]]);
-  const [waiting, setWaiting]= useState (false);
   const [disabled, setDisabled]= useState (false);
   const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
  

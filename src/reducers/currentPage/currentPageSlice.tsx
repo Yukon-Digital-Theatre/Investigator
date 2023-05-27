@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-import Intro from "../../pages/Intro";
 
 const initialState = {
     page:"Intro"

@@ -1,8 +1,31 @@
-import React from 'react'
+import { useDispatch } from 'react-redux';
+import { updatePage } from '../reducers/currentPage/currentPageSlice';
 
 const WrapUp = () => {
+
+  const dispatch= useDispatch();
+
+
+
+  function helper(): void {
+    dispatch(updatePage("WrapUp"));
+  }
+  function helper2(): void {
+    dispatch(updatePage("WrapUp"));
+  }
+  function helper3(): void {
+    dispatch(updatePage("WrapUp"));
+  }
+  function helper4(): void {
+    dispatch(updatePage("WrapUp"));
+  }
+  function helper5(): void {
+    dispatch(updatePage("WrapUp"));
+  }
+
   return (
-    <div>How do you feel about your choices?
+    <>
+    <div className='introText outlineText'>How do you feel about your choices?
     As you leave this world, think of the things you are in contact with right now -  clothes, furniture, the device you are using. Do you know who made them? Where the material came from?
     When you go out into the world, please keep the outcome of this experience as confidential as possible so others may experience it fresh for themselves.
     This experience has been provided free of charge, but if you’d like to support the artists and presenters follow this link to donate.
@@ -12,6 +35,12 @@ const WrapUp = () => {
     
       Thank you for participating. 
     </div>
+    <p className='Button' onClick={()=>helper()}>Back to Wrap Up</p>
+    <p className='Button' onClick={()=>helper2()}>Back to Wrap Up</p>
+    <p className='Button' onClick={()=>helper3()}>Back to Wrap Up</p>
+    <p className='Button' onClick={()=>helper4()}>Back to Wrap Up</p>
+    <p className='Button' onClick={()=>helper5()}>Back to Wrap Up</p>
+    </>
   )
 }
 

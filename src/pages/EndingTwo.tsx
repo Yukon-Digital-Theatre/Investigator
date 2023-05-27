@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import  {  useState } from 'react'
 import { scriptEndingTwo } from '../data/textData'
 import StoryText from '../components/StoryText'
 /*import { nonBinaryAudio } from '../data/backgroundAudioData'
@@ -101,7 +101,7 @@ startInterval();
 
 let scriptLength:number = scriptEndingTwo.length;
 const [temp, setTemp]= useState ([scriptEndingTwo[0]]);
-const [waiting, setWaiting]= useState (false);
+
 const [disabled, setDisabled]= useState (false);
 const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { updatePage } from '../reducers/currentPage/currentPageSlice';
 import { useDispatch } from 'react-redux';
 

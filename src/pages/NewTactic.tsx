@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { scriptNewTactic } from '../data/textData'
 import StoryText from '../components/StoryText'
-import { backgroundAudio } from '../data/backgroundAudioData'
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
 
 const NewTactic = () => {
@@ -10,7 +9,6 @@ const NewTactic = () => {
   
   let scriptLength:number = scriptNewTactic.length;
 const [temp, setTemp]= useState ([scriptNewTactic[0]]);
-const [waiting, setWaiting]= useState (false);
 const [disabled, setDisabled]= useState (false);
 const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
 

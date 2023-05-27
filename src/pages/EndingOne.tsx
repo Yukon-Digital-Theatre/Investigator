@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { scriptEndingOne } from '../data/textData'
 import StoryText from '../components/StoryText'
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
@@ -6,7 +6,6 @@ import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.s
 const EndingOne = () => {
   let scriptLength:number = scriptEndingOne.length;
   const [temp, setTemp]= useState ([scriptEndingOne[0]]);
-  const [waiting, setWaiting]= useState (false);
   const [disabled, setDisabled]= useState (false);
   const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
  

@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import {  useState } from 'react'
 
 import '../sass/App.scss';
 import { scriptMeetTheWeaver } from '../data/textData';
 import StoryText from '../components/StoryText';
 import styled from 'styled-components';
-import { textItem } from '../types';
-import { current } from '@reduxjs/toolkit';
-import { backgroundAudio } from '../data/backgroundAudioData';
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
 
 

@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
 import { scriptDownToBusiness } from '../data/textData'
 import StoryText from '../components/StoryText'
-import { backgroundAudio } from '../data/backgroundAudioData';
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
+import { useState } from 'react';
 
 const DownToBusiness = () => {
   
@@ -11,7 +10,6 @@ const DownToBusiness = () => {
   
   let scriptLength:number = scriptDownToBusiness.length;
   const [temp, setTemp]= useState ([scriptDownToBusiness[0]]);
-  const [waiting, setWaiting]= useState (false);
   const [disabled, setDisabled]= useState (false);
   const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
  
