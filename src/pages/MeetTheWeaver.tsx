@@ -1,9 +1,10 @@
-import {  useState } from 'react'
+import {  useEffect, useState } from 'react'
 
 import '../sass/App.scss';
 import { scriptMeetTheWeaver } from '../data/textData';
 import StoryText from '../components/StoryText';
 import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
+import { backgroundAudio } from '../data/backgroundAudioData';
 
 
 
@@ -15,6 +16,20 @@ const MeetTheWeaver = () => {
   const [temp, setTemp]= useState ([scriptMeetTheWeaver[0]]);
   const [disabled, setDisabled]= useState (false);
   const [currentScriptIndex, setCurrentScriptIndex] = useState(1)
+  
+
+  useEffect(() => {
+    backgroundAudio[0].audio.pause();
+
+    if(!backgroundAudio[0].audio.playing()){
+      backgroundAudio[0].audio.play()
+    }
+  
+    return () => {
+      
+    }
+  }, [])
+  
  
  
  
