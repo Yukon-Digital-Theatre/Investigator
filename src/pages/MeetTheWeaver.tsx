@@ -21,8 +21,8 @@ const MeetTheWeaver = () => {
   useEffect(() => {
     backgroundAudio[0].audio.pause();
 
-    if(!backgroundAudio[0].audio.playing()){
-      backgroundAudio[0].audio.play()
+    if(!backgroundAudio[1].audio.playing()){
+      backgroundAudio[1].audio.play()
     }
   
     return () => {
