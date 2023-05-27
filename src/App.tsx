@@ -130,7 +130,7 @@ function bghalo(){
 
 
   return (
-    
+   
     <div className="App">
        <div className='backdrop-filter'>  
         <div className={bghalo()}>

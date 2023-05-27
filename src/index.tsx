@@ -4,6 +4,7 @@ import './sass/index.scss';
 import App from './App';
 import { store } from './store';
 import { Provider } from 'react-redux';
+import { HashRouter, Routes ,Route} from 'react-router-dom';
 
 
 
@@ -12,10 +13,16 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+      <HashRouter>
   <Provider store={store}>
-    <App />
+    
+    <Routes>
+    <Route path="/" element={<App/>}/>
+    </Routes>
     </Provider>
+    </HashRouter>
   </React.StrictMode>
+  
 );
 
 
