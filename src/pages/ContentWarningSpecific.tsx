@@ -15,8 +15,8 @@ const ContentWarningSpecific = () => {
   return (
     <div>
 
-<p className='introBigText outlineText'> Specific Content Warning Here</p>
-<p className=' introText outlineText Button' onClick={()=>helper()}>Yes</p>
+<p className='introBigText outlineText'> Allusions and discussion of the hair of murder victims being used in the carpets the weaver is weaving. Brief references to mass killings, war, sexual assault, enslaved children, relocation, deportation, starvation, assaults. If you do not want to continue with this experience close your browser. </p>
+<p className=' introText outlineText Button' onClick={()=>helper()}>Continue</p>
     </div>
   )
 }
