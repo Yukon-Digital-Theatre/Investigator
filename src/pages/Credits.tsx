@@ -7,7 +7,7 @@ const Credits = () => {
     const dispatch= useDispatch();
 
     function helper(){
-        dispatch(updatePage("IntroQThree"));
+        dispatch(updatePage("Credits"));
     
     }
     
