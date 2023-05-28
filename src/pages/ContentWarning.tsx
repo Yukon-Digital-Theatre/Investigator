@@ -18,7 +18,7 @@ const ContentWarning = () => {
 
   return (
     <div>
-<p className='introBigText outlineText'> GENERAL CONTENT WARNINGS: The experience mentions directly and indirectly a fictional genocide which took place recently in conjunction with a war. Would you like to see more specific content warnings?
+<p className='introBigText outlineText'> The experience mentions directly and indirectly a fictional genocide which took place recently in conjunction with a war. Would you like to see more specific content warnings?
 </p>
 
 <p className='introText outlineText Button' onClick={()=>helper()}>Yes</p>
