@@ -2,7 +2,9 @@ import React from 'react'
 
 const EndingReport = () => {
   return (
-    <div>Report from Ialo NGO
+
+    
+    <div className='introText letter'>Report from Ialo NGO
 	
 	October 28, 2022
 
@@ -15,8 +17,8 @@ const EndingReport = () => {
 	There is also evidence that the WCIC overreached in some cases by arresting those with insufficient evidence of knowledge and intent. While it is commendable that the WCIC wanted to ensure few of those responsible for the genocide went unpunished, a mistake made throughout history, they failed to follow due process.
 	
 	As well as terminating the WCIC immediately, it has been recommended to do further investigations into the past and present WCIC staff. 
+	</div>
 
-</div>
   )
 }
 

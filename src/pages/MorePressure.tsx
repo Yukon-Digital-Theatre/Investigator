@@ -1,7 +1,7 @@
 import  { useState } from 'react'
 import { scriptMorePressure } from '../data/textData'
 import StoryText from '../components/StoryText'
-import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
+import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
 
 
 const MorePressure = () => {

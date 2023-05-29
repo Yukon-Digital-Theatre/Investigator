@@ -35,11 +35,15 @@ import FollowUpOne from './pages/FollowUpOne';
 import FollowUpTwoA from './pages/FollowUpTwoA';
 import FollowUpTwoB from './pages/FollowUpTwoB';
 import TitlePage from './pages/TitlePage';
+import WhatNowTwoA from './pages/WhatNowTwoA';
+import WhatNowTwoB from './pages/WhatNowTwoB';
+import WorldBackground from './pages/WorldBackground';
+import SettingsBar from './components/SettingsBar';
 
 
 
 function App() {
-  backgroundAudio.map((item, index) => {return index!==0 && item.audio.fade(0,1,2000)});
+
 const haloMode = useSelector((state: any)=>state.haloMode.mode);
   const currentPage = useSelector((state: any)=>state.currentPage.page);
 
@@ -94,6 +98,10 @@ function displayCurrentPage(){
   return <PostShowFollowUp/>
 }else if (currentPage==="WhatNowOne"){
   return <WhatNowOne/>
+}else if (currentPage==="WhatNowTwoA"){
+  return <WhatNowTwoA/>
+}else if (currentPage==="WhatNowTwoB"){
+  return <WhatNowTwoB/>
 }else if (currentPage==="WrapUp"){
   return <WrapUp/>
 }else if (currentPage==="Credits"){
@@ -101,7 +109,7 @@ function displayCurrentPage(){
 }else if (currentPage==="FollowUpOne"){
   return <FollowUpOne/>
 }else if (currentPage==="FollowUpTwoA"){
-  return <FollowUpTwoA/>
+  return <FollowUpTwoA/> 
 }else if (currentPage==="FollowUpTwoB"){
   return <FollowUpTwoB/>
 }else if (currentPage==="TitlePage"){
@@ -109,6 +117,8 @@ function displayCurrentPage(){
 }
 else if (currentPage==="TheEmail"){
   return <TheEmail/>
+}else if (currentPage==="WorldBackground"){
+  return <WorldBackground/>
 }else{
   return <ErrorPage/>
 }
@@ -128,21 +138,44 @@ function bghalo(){
 
 
 
+function bgblur(){
+  if(haloMode===0){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
+    return ''
+  }
+}
+
+
+function log(){
+  console.log("_____________________________")
+  console.log(backgroundAudio[0].audio.playing());
+  console.log(backgroundAudio[1].audio.playing());
+  console.log(backgroundAudio[2].audio.playing());
+  console.log(backgroundAudio[3].audio.playing());
+  console.log(backgroundAudio[4].audio.playing());
+  console.log(backgroundAudio[5].audio.playing());
+  console.log(backgroundAudio[6].audio.playing());
+}
+
+
 
   return (
    
     <div className="App">
-       <div className='backdrop-filter'>  
+       <div className={bgblur()}>  
         <div className={bghalo()}>
-        <div className='backdrop-filter'>   
-    
-    
+        <div className={bgblur()}>   
+        <SettingsBar/>
+  
        
           {displayCurrentPage()}
+          <div className='button' onClick={log}>CLICK TO LOG</div>
           </div>
        
             </div>
         </div>
+       
     </div>
 
   );

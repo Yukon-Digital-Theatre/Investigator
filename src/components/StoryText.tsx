@@ -4,6 +4,7 @@ import { textItem } from "../types";
 import { backgroundAudio } from "../data/backgroundAudioData";
 import { useDispatch } from "react-redux";
 import { updatePage } from "../reducers/currentPage/currentPageSlice";
+import { updateHalo } from "../reducers/haloMode/haloModeSlice";
 
 
 
@@ -21,6 +22,7 @@ background-color:transparent;
 animation-name: fade-in;
 animation-fill-mode:forwards;
 animation-duration:1s;
+text-align: left;
 ${ props => props.leaving && css`
     animation-name:fade-out;
   `};
@@ -89,82 +91,111 @@ const dispatch = useDispatch();
       backgroundAudio[1].audio.fade(1,0,3000);
       setTimeout(() => {
         dispatch(updatePage("GoingWithTheFlow"))
-     
+        backgroundAudio[1].audio.pause();
       backgroundAudio[2].audio.play();
-      }, 2000);
+      }, 1000);
       
     }else if(item.text==="Clarify why you are really here, you don’t have all day "){
       backgroundAudio[1].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("DownToBusiness"))
+      backgroundAudio[1].audio.pause();
       backgroundAudio[2].audio.play();
-    }, 2000);
+    }, 1000);
     }else if(item.text==="The weaver keeps weaving. You know it’s time to be more honest."){
       dispatch(updatePage("DownToBusiness"))
     }else if(item.text==="Yes, you don’t want the weaver to shut down. Keep asking simple questions."){
       backgroundAudio[2].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("KeepGoing"))
+      backgroundAudio[2].audio.pause();
       backgroundAudio[3].audio.play();
-    }, 2000);
+    }, 1000);
     }else if(item.text==="No, it’s time to ask harder questions, you’ll risk the weaver shutting down."){
       backgroundAudio[2].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("NewTactic"))
+      backgroundAudio[2].audio.pause();
       backgroundAudio[3].audio.play();
-    }, 2000);
+    }, 1000);
     }else if(item.text==="Continue"&&item.id===888){
       dispatch(updatePage("NewTactic"))
     }else if(item.text==="No, the weaver must have known, you’ll need to apply more pressure to get the truth, to get a confession."){
-      backgroundAudio[2].audio.fade(1,0,3000);
+      backgroundAudio[3].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("MorePressure"))
-      backgroundAudio[3].audio.play();
-    }, 2000);
+      backgroundAudio[3].audio.pause();
+      backgroundAudio[4].audio.play();
+    }, 1000);
     }else if(item.text==="Yes, you believe the weaver really doesn’t know and you’ll have to break it down to make the weaver realize so that more questions can be answered"){
-      backgroundAudio[2].audio.fade(1,0,3000);
+      backgroundAudio[3].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("BreakItDown"))
-      backgroundAudio[3].audio.play();
-    }, 2000);
+      backgroundAudio[3].audio.pause();
+      backgroundAudio[4].audio.play();
+      backgroundAudio[4].audio.fade(0,1,2000);
+    }, 1000);
     }else if(item.text==="Continue"&&item.id===222){
       dispatch(updatePage("BreakItDown"))
     }else if(item.text==="Yes, it might be important "){
       backgroundAudio[4].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("TheEmail"))
+      backgroundAudio[4].audio.pause();
       backgroundAudio[5].audio.play();
-    }, 2000);
+    }, 1000);
     }else if(item.text==="No, if it was that important it would be a phone call "){
       backgroundAudio[4].audio.fade(1,0,3000);
       setTimeout(() => {
-      dispatch(updatePage("TheEmail"))
+      dispatch(updatePage("Admission"))
+      backgroundAudio[4].audio.pause();
       backgroundAudio[5].audio.play();
-    }, 2000);
+      backgroundAudio[5].audio.fade(0,1,2000);
+    }, 1000);
     }else if(item.text==="You Watch"){
       dispatch(updatePage("Admission"))
     }else if(item.text==="While the weaver made some good points, the weaver is still enough in the wrong to warrant further investigation and maybe a trial, you arrest the weaver."){
       backgroundAudio[5].audio.fade(1,0,3000);
+      dispatch(updateHalo(0));
       setTimeout(() => {
       dispatch(updatePage("EndingOne"))
+      backgroundAudio[5].audio.pause();
       backgroundAudio[6].audio.play();
-    }, 2000);
+      backgroundAudio[6].audio.fade(0,1,2000);
+    }, 1000);
     }else if(item.text==="The weaver seems genuine and made some good points, this doesn’t feel quite right to you, you let the weaver go"){
       backgroundAudio[5].audio.fade(1,0,3000);
       setTimeout(() => {
       dispatch(updatePage("EndingTwo"))
+      backgroundAudio[5].audio.pause();
       backgroundAudio[6].audio.play();
-    }, 2000);
+    }, 1000);
     }else if(item.text==="Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others."){
-      dispatch(updatePage("EndingTwoA"))
+      
+      setTimeout(() => {
+        dispatch(updatePage("EndingTwoA"))
+       
+      }, 1000);
     }else if(item.text==="No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk. "){
-      dispatch(updatePage("EndingTwoB"))
+      setTimeout(() => {
+        dispatch(updatePage("EndingTwoB"))
+       
+      }, 1000);
     }else if(item.text==="What now?" && item.id===1007){
-      dispatch(updatePage("WhatNowOne"))
+      setTimeout(() => {
+        dispatch(updatePage("WhatNowOne"))
+       
+      }, 1000);
     }else if(item.text==="What now?" && item.id===7777){
-      dispatch(updatePage("WhatNowTwoA"))
+      setTimeout(() => {
+        dispatch(updatePage("WhatNowTwoA"))
+       
+      }, 1000);
     }else if(item.text==="What now?" && item.id===1111){
-      dispatch(updatePage("WhatNowTwoB"))
+      setTimeout(() => {
+        dispatch(updatePage("WhatNowTwoB"))
+       
+      }, 1000);
     }
     
     
@@ -191,7 +222,7 @@ const dispatch = useDispatch();
     ):(
      
           <div style={{'backgroundColor':"transparent",'alignSelf':"flex-start"}as React.CSSProperties}>
-        <NarratorContainer leaving = {false} className="Button outlineText" onClick={() => redirect()}>{item.text}</NarratorContainer>
+        <NarratorContainer leaving = {false} className="choiceButton outlineText" onClick={() => redirect()}>{item.text}</NarratorContainer>
         
         </div>
 

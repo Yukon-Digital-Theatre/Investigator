@@ -2,7 +2,7 @@ import React from 'react'
 
 const EndingFamilyEmail = () => {
   return (
-    <div className='lettercontainer'>
+   
     
     <div className='introText letter'>Email from Representative of the Family
     Subject: Information on Weaver #11
@@ -20,7 +20,7 @@ Thank you for your time and attention,
 
 Samharan Prisoners’ Rights Association
 </div>
-</div>
+
   )
 }
 

@@ -3,6 +3,8 @@
 @import './keyframes';
 @import './components/storytext';
 @import './components/paper';
+@import './components/_wrapup';
+@import './components/_settingsbar';
 
 .App {
   text-align:left;
@@ -29,7 +31,11 @@
 position: absolute;
 width: 100vw;
 height: 100vh;
-
+display: flex;
+text-align:center;
+justify-content: center;
+flex-direction: column;
+align-items: center;
  
 
 background: radial-gradient(47.8% 47.8% at 50% 50%, rgba(210, 209, 209, 0.76) 26.97%, rgba(239, 233, 233, 0.660004) 51.68%, rgba(239, 233, 233, 0.452447) 73.52%, rgba(239, 233, 233, 0.158038) 88.94%, rgba(239, 233, 233, 0) 100%);

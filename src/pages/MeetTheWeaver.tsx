@@ -3,7 +3,7 @@ import {  useEffect, useState } from 'react'
 import '../sass/App.scss';
 import { scriptMeetTheWeaver } from '../data/textData';
 import StoryText from '../components/StoryText';
-import { ReactComponent as ArrowButton } from '../images/lni_lni-chevron-right.svg'
+import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
 import { backgroundAudio } from '../data/backgroundAudioData';
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const EndingNewsPaper = () => {
   return (
-    <div className='lettercontainer'>
+
     
     <div className='introText letter'>Newspaper clipping:
     December 5, 2022
@@ -13,7 +13,7 @@ const EndingNewsPaper = () => {
     
     There are several prominent Turion communities in Py-Conto from the diaspora of the 1700s. All have reported increases of hate crimes and raised concerns about anti-Turion organizations establishing themselves. They are urging the Py-Conto government to cooperate with the ICC and crack down on organizations which are pro-Golden Arm or anti-Turion.
     </div>
-    </div>
+    
   )
 }
 
