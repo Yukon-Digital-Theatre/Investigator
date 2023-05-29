@@ -16,7 +16,25 @@ line-height: 3.22581vh;
 letter-spacing: 0.05em;
 width:45vw;
 padding:1vh;
-padding-top:5vh;
+padding-bottom:1vh;
+background-color:transparent;
+animation-name: fade-in;
+animation-fill-mode:forwards;
+animation-duration:1s;
+text-align: left;
+${ props => props.leaving && css`
+    animation-name:fade-out;
+  `};
+
+`;
+const WeaverEndContainer = styled.div<{ leaving: boolean }>`
+font-family: 'Noto Serif', serif;
+font-size: 1.09375vw;
+font-weight: 400;
+line-height: 3.22581vh;
+letter-spacing: 0.05em;
+width:45vw;
+padding:1vh;
 padding-bottom:5vh;
 background-color:transparent;
 animation-name: fade-in;
@@ -34,7 +52,6 @@ display:flex;
 justify-content:flex-end;
 text-align:justify;
 padding:1vh;
-padding-top:5vh;
 padding-bottom:5vh;
 width:45vw;
 font-family: 'Sofia Sans', sans-serif;
@@ -91,11 +108,13 @@ const dispatch = useDispatch();
       backgroundAudio[1].audio.fade(1,0,3000);
       setTimeout(() => {
         dispatch(updatePage("GoingWithTheFlow"))
-        backgroundAudio[1].audio.pause();
+        
       backgroundAudio[2].audio.play();
       backgroundAudio[2].audio.fade(0,1,2000);
       }, 1000);
-      
+      setTimeout(() => {
+        backgroundAudio[1].audio.pause();
+      }, 3000);
     }else if(item.text==="Clarify why you are really here, you don’t have all day "){
       backgroundAudio[1].audio.fade(1,0,3000);
       setTimeout(() => {
@@ -222,6 +241,14 @@ const dispatch = useDispatch();
 
       <div style={{'backgroundColor':"transparent",'alignSelf':"flex-start"}as React.CSSProperties}>
       <WeaverContainer leaving={leaving}>{item.text}</WeaverContainer>
+      </div>
+    
+    
+    
+    ):item.speaker === "weaverend"?(
+
+      <div style={{'backgroundColor':"transparent",'alignSelf':"flex-start"}as React.CSSProperties}>
+      <WeaverEndContainer leaving={leaving}>{item.text}</WeaverEndContainer>
       </div>
     
     

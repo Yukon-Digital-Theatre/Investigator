@@ -136,6 +136,18 @@ function bghalo(){
     return 'BackgroundHalo'
   }else if(haloMode===1){
     return 'BackgroundHalo introhalo'
+  }else if(haloMode===2){
+    return 'BackgroundHalo MTWhalo'
+  }else if(haloMode===1){
+    return 'BackgroundHalo introhalo'
+  }else if(haloMode===1){
+    return 'BackgroundHalo introhalo'
+  }else if(haloMode===1){
+    return 'BackgroundHalo introhalo'
+  }else if(haloMode===1){
+    return 'BackgroundHalo introhalo'
+  }else if(haloMode===1){
+    return 'BackgroundHalo introhalo'
   }
 }
 
@@ -143,6 +155,18 @@ function bghalo(){
 
 function bgblur(){
   if(haloMode===0){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
+    return 'backdrop-filter'
+  }else if(haloMode===2){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
     return 'backdrop-filter'
   }else if(haloMode===1){
     return 'backdrop-filter'
@@ -172,7 +196,7 @@ function log(){
         <SettingsBar/>
   
        
-          {displayCurrentPage()}
+          <GoingWithTheFlow/>
           
           </div>
        

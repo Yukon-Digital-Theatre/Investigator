@@ -1,5 +1,6 @@
 import { updatePage } from '../reducers/currentPage/currentPageSlice';
 import { useDispatch } from 'react-redux';
+import { updateHalo } from '../reducers/haloMode/haloModeSlice';
 
 const IntroQFive = () => {
     const dispatch= useDispatch();
@@ -10,7 +11,11 @@ function helper(){
 }
 
 function helperTwo(){
+  dispatch(updateHalo(2));
+  setTimeout(() => {
     dispatch(updatePage("MeetTheWeaver"));
+  }, 1000);
+    
 
 }
 

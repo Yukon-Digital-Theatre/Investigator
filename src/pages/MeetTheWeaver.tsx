@@ -5,12 +5,15 @@ import { scriptMeetTheWeaver } from '../data/textData';
 import StoryText from '../components/StoryText';
 import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
 import { backgroundAudio } from '../data/backgroundAudioData';
+import { updateHalo } from '../reducers/haloMode/haloModeSlice';
+import { useDispatch } from 'react-redux';
 
 
 
 
 const MeetTheWeaver = () => {
-
+ 
+  const dispatch = useDispatch()
 
   let scriptLength:number = scriptMeetTheWeaver.length;
   const [temp, setTemp]= useState ([scriptMeetTheWeaver[0]]);
@@ -19,10 +22,15 @@ const MeetTheWeaver = () => {
   
 
   useEffect(() => {
-    backgroundAudio[0].audio.pause();
+    
+    backgroundAudio[0].audio.fade(1,0,2000);
+    setTimeout(() => {
+      backgroundAudio[0].audio.pause();
+    }, 2000);
 
     if(!backgroundAudio[1].audio.playing()){
       backgroundAudio[1].audio.play()
+      backgroundAudio[1].audio.fade(0,1,2000);
     }
   
     return () => {

@@ -11,7 +11,7 @@ const [style, setStyle] = useState(false)
 function helper(){
   setStyle(true);
   setTimeout(() => {
-    dispatch(updatePage("TitlePage"));
+    dispatch(updatePage("MoreAboutArtists"));
 
   }, 2000);
 }

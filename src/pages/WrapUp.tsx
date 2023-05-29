@@ -24,11 +24,11 @@ const WrapUp = () => {
   }
   function helper5(): void {
 
-    window.open('https://codefrontend.com');
+    window.open('');
   }
   function helper6(): void {
 
-    window.open('https://codefrontend.com');
+    window.open('');
   }
   function helper7(): void {
 
@@ -49,7 +49,7 @@ const WrapUp = () => {
     <div className='wrapupText outlineText'>
     If you wish to share any thoughts with the artistic team click here
     </div>
-    <p className='Button introText' onClick={()=>helper6()}>Share your thoughts</p>
+    <p className='WrapUpButton introText' onClick={()=>helper6()}>Share your thoughts</p>
     <div className='wrapupText outlineText'>
     Explore the links below to read about the artists involved, go back to the history of the world, discover more projects by the Yukon Digital Theatre Collective, or begin again. 
     </div> 
