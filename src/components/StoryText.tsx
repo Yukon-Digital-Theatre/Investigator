@@ -93,6 +93,7 @@ const dispatch = useDispatch();
         dispatch(updatePage("GoingWithTheFlow"))
         backgroundAudio[1].audio.pause();
       backgroundAudio[2].audio.play();
+      backgroundAudio[2].audio.fade(0,1,2000);
       }, 1000);
       
     }else if(item.text==="Clarify why you are really here, you don’t have all day "){
@@ -101,6 +102,7 @@ const dispatch = useDispatch();
       dispatch(updatePage("DownToBusiness"))
       backgroundAudio[1].audio.pause();
       backgroundAudio[2].audio.play();
+      backgroundAudio[2].audio.fade(0,1,2000);
     }, 1000);
     }else if(item.text==="The weaver keeps weaving. You know it’s time to be more honest."){
       dispatch(updatePage("DownToBusiness"))
@@ -110,6 +112,7 @@ const dispatch = useDispatch();
       dispatch(updatePage("KeepGoing"))
       backgroundAudio[2].audio.pause();
       backgroundAudio[3].audio.play();
+      backgroundAudio[3].audio.fade(0,1,2000);
     }, 1000);
     }else if(item.text==="No, it’s time to ask harder questions, you’ll risk the weaver shutting down."){
       backgroundAudio[2].audio.fade(1,0,3000);
@@ -117,6 +120,7 @@ const dispatch = useDispatch();
       dispatch(updatePage("NewTactic"))
       backgroundAudio[2].audio.pause();
       backgroundAudio[3].audio.play();
+      backgroundAudio[3].audio.fade(0,1,2000);
     }, 1000);
     }else if(item.text==="Continue"&&item.id===888){
       dispatch(updatePage("NewTactic"))
@@ -126,6 +130,7 @@ const dispatch = useDispatch();
       dispatch(updatePage("MorePressure"))
       backgroundAudio[3].audio.pause();
       backgroundAudio[4].audio.play();
+      backgroundAudio[4].audio.fade(0,1,2000);
     }, 1000);
     }else if(item.text==="Yes, you believe the weaver really doesn’t know and you’ll have to break it down to make the weaver realize so that more questions can be answered"){
       backgroundAudio[3].audio.fade(1,0,3000);
@@ -143,6 +148,7 @@ const dispatch = useDispatch();
       dispatch(updatePage("TheEmail"))
       backgroundAudio[4].audio.pause();
       backgroundAudio[5].audio.play();
+      backgroundAudio[5].audio.fade(0,1,2000);
     }, 1000);
     }else if(item.text==="No, if it was that important it would be a phone call "){
       backgroundAudio[4].audio.fade(1,0,3000);
@@ -169,6 +175,7 @@ const dispatch = useDispatch();
       dispatch(updatePage("EndingTwo"))
       backgroundAudio[5].audio.pause();
       backgroundAudio[6].audio.play();
+      backgroundAudio[6].audio.fade(0,1,2000);
     }, 1000);
     }else if(item.text==="Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others."){
       

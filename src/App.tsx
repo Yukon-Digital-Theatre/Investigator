@@ -39,6 +39,7 @@ import WhatNowTwoA from './pages/WhatNowTwoA';
 import WhatNowTwoB from './pages/WhatNowTwoB';
 import WorldBackground from './pages/WorldBackground';
 import SettingsBar from './components/SettingsBar';
+import MoreAboutArtists from './pages/MoreAboutArtists';
 
 
 
@@ -119,6 +120,8 @@ else if (currentPage==="TheEmail"){
   return <TheEmail/>
 }else if (currentPage==="WorldBackground"){
   return <WorldBackground/>
+}else if (currentPage==="MoreAboutArtists"){
+  return <MoreAboutArtists/>
 }else{
   return <ErrorPage/>
 }
@@ -142,7 +145,7 @@ function bgblur(){
   if(haloMode===0){
     return 'backdrop-filter'
   }else if(haloMode===1){
-    return ''
+    return 'backdrop-filter'
   }
 }
 
@@ -170,7 +173,7 @@ function log(){
   
        
           {displayCurrentPage()}
-          <div className='button' onClick={log}>CLICK TO LOG</div>
+          
           </div>
        
             </div>

@@ -15,11 +15,24 @@ const WrapUp = () => {
   }
   
   function helper3(): void {
-    dispatch(updatePage("WordlBackground"));
+    dispatch(updatePage("WorldBackground"));
   }
   function helper4(): void {
 
+    Howler.stop();
     dispatch(updatePage("Intro"));
+  }
+  function helper5(): void {
+
+    window.open('https://codefrontend.com');
+  }
+  function helper6(): void {
+
+    window.open('https://codefrontend.com');
+  }
+  function helper7(): void {
+
+    dispatch(updatePage("MoreAboutArtists"));
   }
 
   return (
@@ -32,11 +45,11 @@ const WrapUp = () => {
     <div className='wrapupText outlineText'>
     This experience has been provided free of charge, but if you’d like to support the artists and presenters follow this link to donate.
     </div> 
-    <p className='Button introText' onClick={()=>helper2()}>Donate</p>
+    <div className='WrapUpButton introText'  onClick={()=>helper5()}>Donate</div>
     <div className='wrapupText outlineText'>
     If you wish to share any thoughts with the artistic team click here
     </div>
-    <p className='Button introText' onClick={()=>helper2()}>Share your thoughts</p>
+    <p className='Button introText' onClick={()=>helper6()}>Share your thoughts</p>
     <div className='wrapupText outlineText'>
     Explore the links below to read about the artists involved, go back to the history of the world, discover more projects by the Yukon Digital Theatre Collective, or begin again. 
     </div> 
@@ -46,13 +59,13 @@ const WrapUp = () => {
     <div className='introText outlineText'>
       Thank you for participating.
     </div>
-<div className='wrapup_buttons'>
+<div className='flexwrapupcontainer'>
    
-    <p className='Button introText' onClick={()=>helper2()}>Credits</p>
-    <p className='Button introText' onClick={()=>helper2()}>More About the Artists</p>
-    <p className='Button introText' onClick={()=>helper3()}>World History</p>
-    <p className='Button introText' onClick={()=>helper()}>More YDTC Projects</p>
-    <p className='Button introText' onClick={()=>helper4()}>Back to the Beginning</p>
+    <p className='WrapUpButton introText' onClick={()=>helper2()}>Credits</p>
+    <p className='WrapUpButton introText' onClick={()=>helper7()}>More About the Artists</p>
+    <p className='WrapUpButton introText' onClick={()=>helper3()}>World History</p>
+    <p className='WrapUpButton introText' onClick={()=>helper()}>More YDTC Projects</p>
+    <p className='WrapUpButton introText' onClick={()=>helper4()}>Back to the Beginning</p>
      
     </div>
     

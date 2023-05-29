@@ -13,7 +13,7 @@ const MoreAboutArtists = () => {
     
 
   return (
-    <><div>
+    <div className='lettercontainer'><div>
       Wren Brian – Creator & Co-Artistic Producer
     </div><div className='Button introText'>
         Wren is a playwright and producer who is dedicated to creating characters that can be played by actors of any gender, ancestry, ability, and/or age. Her play Anomie won the 2017 Harry S. Rintoul Award for Best New Manitoba Play at the Winnipeg Fringe Festival, her play Bystander had its world premiere at Gwaandak Theatre in October 2018, and she was one of 50 international playwrights commissioned for Climate Change Theatre Action 2021 and 2023. She was also recently shortlisted for the John Hirsch Emerging Manitoba Writer Award in 2022. For more information visit: wrenbrian.com
@@ -61,7 +61,7 @@ const MoreAboutArtists = () => {
         </div>
 
         <p className='Button' onClick={() => helper()}>Yes</p>
-      </div></>
+      </div></div>
   )
 }
 

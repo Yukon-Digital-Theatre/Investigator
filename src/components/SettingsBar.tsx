@@ -21,7 +21,7 @@ const SettingsBar = () => {
 
 
 
-const [toggleMute, setToggleMute] = useState(true)
+const [toggleMute, setToggleMute] = useState(false)
 
 useEffect(() => {
   Howler.mute(toggleMute);

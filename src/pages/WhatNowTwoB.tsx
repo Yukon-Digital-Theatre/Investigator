@@ -10,7 +10,7 @@ function helper(){
 }
 
 function helperTwo(){
-    dispatch(updatePage("WhatNow"));
+    dispatch(updatePage("WrapUp"));
 
 }
 
