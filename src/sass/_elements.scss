@@ -6,6 +6,10 @@
     text-shadow: 2px 1px 0 $outlineColor, 2px -1px 0 $outlineColor, -2px 1px 0 $outlineColor, -2px -1px 0 $outlineColor, 2px 0px 0 $outlineColor, 0px 1px 0 $outlineColor, -2px 0px 0 $outlineColor, 0px -1px 0 $outlineColor, 1px 2px 0 $outlineColor, 1px -2px 0 $outlineColor, -1px 2px 0 $outlineColor, -1px -2px 0 $outlineColor, 1px 0px 0 $outlineColor, 0px 2px 0 $outlineColor, -1px 0px 0 $outlineColor, 0px -2px 0 $outlineColor, 1px 1px 0 $outlineColor, 1px -1px 0 $outlineColor, -1px 1px 0 $outlineColor, -1px -1px 0 $outlineColor, 2px 2px 0 $outlineColor, 2px -2px 0 $outlineColor, -2px 2px 0 $outlineColor, -2px -2px 0 $outlineColor, 2px 0px 0 $outlineColor, 0px 2px 0 $outlineColor, -2px 0px 0 $outlineColor, 0px -2px 0 $outlineColor;
 }
 
+.outlineTextWhite{
+  text-shadow: 2px 1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -2px -1px #FFFFFF, 2px 0px 0 #FFFFFF, 0px 1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 0px 2px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 2px 2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px 0px 0 #FFFFFF, 0px 2px 0 #FFFFFF, -2px 0px 0 #FFFFFF, 0px -2px 0 #FFFFFF;
+}
+
 .disabled{
     opacity:0.4;
    

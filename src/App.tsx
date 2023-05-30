@@ -196,7 +196,7 @@ function log(){
         <SettingsBar/>
   
        
-          {displayCurrentPage()}
+         {displayCurrentPage()}
           
           </div>
        
