@@ -17,7 +17,7 @@ const StoryBackground = () => {
   return (
     <div className='lettercontainer'>
     
-    <div className='introText letter'>Samharan is the most populous and second largest country in the North East Continent. It is bordered by the sea to the southwest, Ialo in the south, and Tura to the east. A mountain range divides the northern border with Hurauk.
+      <div className='introText letter'> <p> BACKGROUND:</p> <p> Samharan is the most populous and second largest country in the North East Continent. It is bordered by the sea to the southwest, Ialo in the south, and Tura to the east. A mountain range divides the northern border with Hurauk. </p>
     </div><div className='letterspacer'/><div className='introText letter'>
       Various Samharanic tribes have inhabited the western part of the country since ancient times, while the eastern part of the country was initially inhabited by various nomadic Turion tribes. In the 1600s the Samha Empire established itself as an industrial and technologically advanced civilization, and by 1700 expanded its territory stretching to the eastern ocean. Despite periods of integration between those of Samha and Turion descent during the empire’s two-hundred-year rule, Turion calls for independence never completely went away. The empire collapsed in 1913 following a civil war spurred by a Turion nationalist movement. This established the country of Samharan to the west, and the smaller Tura to the east. While the majority of the Turion population in the newly established borders of Samharan accepted citizenship to Tura and relocated, about 35% chose to stay in Samharan, many living in the east and in the main cities.
     
