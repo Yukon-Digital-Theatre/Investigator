@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { scriptAdmission } from '../data/textData'
 import StoryText from '../components/StoryText'
 import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
-import SettingsBar from '../components/SettingsBar'
+
 
 const Admission = () => {
   let scriptLength:number = scriptAdmission.length;

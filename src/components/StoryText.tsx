@@ -150,9 +150,9 @@ const dispatch = useDispatch();
   function redirect(){
     if(item.text==="Go along with it, you might learn more "){
       backgroundAudio[1].audio.fade(1,0,3000);
+      dispatch(updateHalo(3));
       setTimeout(() => {
-        dispatch(updatePage("GoingWithTheFlow"))
-        
+      dispatch(updatePage("GoingWithTheFlow"))
       backgroundAudio[2].audio.play();
       backgroundAudio[2].audio.fade(0,1,2000);
       }, 1000);
@@ -161,85 +161,128 @@ const dispatch = useDispatch();
       }, 3000);
     }else if(item.text==="Clarify why you are really here, you don’t have all day "){
       backgroundAudio[1].audio.fade(1,0,3000);
+      dispatch(updateHalo(3));
       setTimeout(() => {
       dispatch(updatePage("DownToBusiness"))
       backgroundAudio[1].audio.pause();
       backgroundAudio[2].audio.play();
       backgroundAudio[2].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[1].audio.pause();
+    }, 3000);
     }else if(item.text==="The weaver keeps weaving. You know it’s time to be more honest."){
+      setTimeout(() => {
       dispatch(updatePage("DownToBusiness"))
+    }, 1000);
     }else if(item.text==="Yes, you don’t want the weaver to shut down. Keep asking simple questions."){
       backgroundAudio[2].audio.fade(1,0,3000);
+      dispatch(updateHalo(4));
       setTimeout(() => {
       dispatch(updatePage("KeepGoing"))
       backgroundAudio[2].audio.pause();
       backgroundAudio[3].audio.play();
       backgroundAudio[3].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[2].audio.pause();
+    }, 3000);
     }else if(item.text==="No, it’s time to ask harder questions, you’ll risk the weaver shutting down."){
       backgroundAudio[2].audio.fade(1,0,3000);
+      dispatch(updateHalo(4));
       setTimeout(() => {
       dispatch(updatePage("NewTactic"))
       backgroundAudio[2].audio.pause();
       backgroundAudio[3].audio.play();
       backgroundAudio[3].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[2].audio.pause();
+    }, 3000);
     }else if(item.text==="Continue"&&item.id===23){
+      setTimeout(() => {
       dispatch(updatePage("NewTactic"))
+    }, 1000);
     }else if(item.text==="No, the weaver must have known, you’ll need to apply more pressure to get the truth, to get a confession."){
       backgroundAudio[3].audio.fade(1,0,3000);
+      dispatch(updateHalo(5));
       setTimeout(() => {
       dispatch(updatePage("MorePressure"))
       backgroundAudio[3].audio.pause();
       backgroundAudio[4].audio.play();
       backgroundAudio[4].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[3].audio.pause();
+    }, 3000);
     }else if(item.text==="Yes, you believe the weaver really doesn’t know and you’ll have to break it down to make the weaver realize so that more questions can be answered"){
       backgroundAudio[3].audio.fade(1,0,3000);
+      dispatch(updateHalo(5));
       setTimeout(() => {
       dispatch(updatePage("BreakItDown"))
       backgroundAudio[3].audio.pause();
       backgroundAudio[4].audio.play();
       backgroundAudio[4].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[3].audio.pause();
+    }, 3000);
     }else if(item.text==="Continue"&&item.id===25){
+      setTimeout(() => {
       dispatch(updatePage("BreakItDown"))
+    }, 1000);
     }else if(item.text==="Yes, it might be important "){
       backgroundAudio[4].audio.fade(1,0,3000);
+      dispatch(updateHalo(6));
       setTimeout(() => {
       dispatch(updatePage("TheEmail"))
       backgroundAudio[4].audio.pause();
       backgroundAudio[5].audio.play();
       backgroundAudio[5].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[4].audio.pause();
+    }, 3000);
     }else if(item.text==="No, if it was that important it would be a phone call "){
       backgroundAudio[4].audio.fade(1,0,3000);
+      dispatch(updateHalo(6));
       setTimeout(() => {
       dispatch(updatePage("Admission"))
       backgroundAudio[4].audio.pause();
       backgroundAudio[5].audio.play();
       backgroundAudio[5].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[4].audio.pause();
+    }, 3000);
     }else if(item.text==="You Watch"){
+      setTimeout(() => {
       dispatch(updatePage("Admission"))
+    }, 1000);
     }else if(item.text==="While the weaver made some good points, the weaver is still enough in the wrong to warrant further investigation and maybe a trial, you arrest the weaver."){
       backgroundAudio[5].audio.fade(1,0,3000);
-      dispatch(updateHalo(0));
+      dispatch(updateHalo(7));
       setTimeout(() => {
       dispatch(updatePage("EndingOne"))
       backgroundAudio[5].audio.pause();
       backgroundAudio[6].audio.play();
       backgroundAudio[6].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[5].audio.pause();
+    }, 3000);
     }else if(item.text==="The weaver seems genuine and made some good points, this doesn’t feel quite right to you, you let the weaver go"){
       backgroundAudio[5].audio.fade(1,0,3000);
+      dispatch(updateHalo(7));
       setTimeout(() => {
       dispatch(updatePage("EndingTwo"))
       backgroundAudio[5].audio.pause();
       backgroundAudio[6].audio.play();
       backgroundAudio[6].audio.fade(0,1,2000);
     }, 1000);
+    setTimeout(() => {
+      backgroundAudio[5].audio.pause();
+    }, 3000);
     }else if(item.text==="Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others."){
       
       setTimeout(() => {

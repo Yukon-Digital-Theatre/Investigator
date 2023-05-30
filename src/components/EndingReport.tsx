@@ -4,7 +4,8 @@ const EndingReport = () => {
   return (
 
     
-    <div className='introText letter'>Report from Ialo NGO
+    <div className='introText letter'>
+	Report from Ialo NGO
 	
 	October 28, 2022
 

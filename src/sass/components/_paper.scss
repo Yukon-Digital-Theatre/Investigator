@@ -6,10 +6,12 @@
     background: #fff;
     color: #000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    margin: 26px auto 0;
+    margin: 2vh auto 0;
     width:80%;
-    padding: 24px;
+    padding: 2vh;
     position: relative;
+    font-size: 1.5vh;
+   
     
   }
   .letter:before, .letter:after {
@@ -24,15 +26,21 @@
     background: #fafafa;
     box-shadow: 0 0 8px rgba(0,0,0,0.2);
     left: -5px;
-    top: 4px;
-    transform: rotate(-2.5deg);
+    top: 3px;
+    transform: rotate(-1.5deg);
   }
   .letter:after {
     background: #f6f6f6;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     right: -3px;
     top: 1px;
-    transform: rotate(1.4deg);
+    transform: rotate(1deg);
+  }
+
+  .letterspacer{
+    height: 4vh;
+    width: 100vw;
+    color: transparent;
   }
 
   .lettercontainer{

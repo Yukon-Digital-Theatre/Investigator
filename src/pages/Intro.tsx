@@ -1,13 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { updatePage } from '../reducers/currentPage/currentPageSlice';
 import { useState } from 'react';
+import { updateHalo } from '../reducers/haloMode/haloModeSlice';
 
 const Intro = () => {
 
 const dispatch= useDispatch();
   
 const [style, setStyle] = useState(false)
-
+dispatch(updateHalo(0));
 function helper(){
   setStyle(true);
   setTimeout(() => {

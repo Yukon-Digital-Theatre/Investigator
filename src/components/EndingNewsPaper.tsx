@@ -4,7 +4,7 @@ const EndingNewsPaper = () => {
   return (
 
     
-    <div className='introText letter'>Newspaper clipping:
+    <div className='introText letter'>
     December 5, 2022
     Murderers Fled to Py-Conto
     CAPITAL – The International Criminal Court (ICC) has begun communications with Py-Conto about extraditing several high-profile military and government personnel believed to have played key roles in the genocide.

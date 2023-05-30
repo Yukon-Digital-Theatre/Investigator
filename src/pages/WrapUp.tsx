@@ -8,7 +8,7 @@ const WrapUp = () => {
 
 
   function helper(): void {
-    dispatch(updatePage("WrapUp"));
+    window.open('mailto:ytdigitaltheatrecollective@gmail.com?subject=Sign%20up%20for%20Email%20List&body=I’d%20like%20to%20hear%20when%20more%20Yukon%20Digital%20Theatre%20Collective projects%20are%20ready%20to%20see!');
   }
   function helper2(): void {
     dispatch(updatePage("Credits"));
@@ -21,14 +21,15 @@ const WrapUp = () => {
 
     Howler.stop();
     dispatch(updatePage("Intro"));
+    
   }
   function helper5(): void {
 
-    window.open('');
+    window.open('https://www.canadahelps.org/en/dn/80843');
   }
   function helper6(): void {
 
-    window.open('');
+   window.open('mailto:ytdigitaltheatrecollective@gmail.com?subject=Investigator%20Feedback');
   }
   function helper7(): void {
 

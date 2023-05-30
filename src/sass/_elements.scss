@@ -33,23 +33,21 @@
    
   }
   .filter-one{
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(6px);
   }
   .filter-two{
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
   }
   .filter-three{
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(2px);
   }
   .filter-four{
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(1px);
   }
   .filter-five{
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(0px);
   }
-  .filter-six{
-    backdrop-filter: blur(8px);
-  }
+
 
   .radialwrapper {
 
@@ -86,7 +84,8 @@ animation-duration:3s;
   .introText{
     display: flex;
     justify-content: center;
-    
+    margin-left: 8vh;
+    margin-right: 8vh;
     
         padding:1vh;
     font-family: 'Special Elite', cursive;
@@ -104,7 +103,8 @@ animation-duration:3s;
       }
 
     .introBigText{
-        
+      margin-left: 8vh;
+      margin-right: 8vh;
             display: flex;
             justify-content: center;
             

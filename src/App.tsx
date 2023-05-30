@@ -16,7 +16,7 @@ import NewTactic from './pages/NewTactic';
 import EndingTwo from './pages/EndingTwo';
 import EndingTwoB from './pages/EndingTwoB';
 import EndingTwoA from './pages/EndingTwoA';
-import { backgroundAudio } from './data/backgroundAudioData';
+
 import { useSelector } from 'react-redux';
 import EndingOne from './pages/EndingOne';
 import PostShowFollowUp from './pages/PostShowFollowUp';
@@ -138,16 +138,16 @@ function bghalo(){
     return 'BackgroundHalo introhalo'
   }else if(haloMode===2){
     return 'BackgroundHalo MTWhalo'
-  }else if(haloMode===1){
-    return 'BackgroundHalo introhalo'
-  }else if(haloMode===1){
-    return 'BackgroundHalo introhalo'
-  }else if(haloMode===1){
-    return 'BackgroundHalo introhalo'
-  }else if(haloMode===1){
-    return 'BackgroundHalo introhalo'
-  }else if(haloMode===1){
-    return 'BackgroundHalo introhalo'
+  }else if(haloMode===3){
+    return 'BackgroundHalo pmtwhalo'
+  }else if(haloMode===4){
+    return 'BackgroundHalo halofour'
+  }else if(haloMode===5){
+    return 'BackgroundHalo'
+  }else if(haloMode===6){
+    return 'BackgroundHalo'
+  }else if(haloMode===7){
+    return 'BackgroundHalo'
   }
 }
 
@@ -158,32 +158,45 @@ function bgblur(){
     return 'backdrop-filter'
   }else if(haloMode===1){
     return 'backdrop-filter'
-  }else if(haloMode===1){
-    return 'backdrop-filter'
   }else if(haloMode===2){
     return 'backdrop-filter'
-  }else if(haloMode===1){
-    return 'backdrop-filter'
-  }else if(haloMode===1){
-    return 'backdrop-filter'
-  }else if(haloMode===1){
-    return 'backdrop-filter'
-  }else if(haloMode===1){
-    return 'backdrop-filter'
+  }else if(haloMode===3){
+    return 'backdrop-filter filter-one'
+  }else if(haloMode===4){
+    return 'backdrop-filter filter-two'
+  }else if(haloMode===5){
+    return 'backdrop-filter filter-three'
+  }else if(haloMode===6){
+    return 'backdrop-filter filter-four'
+  }else if(haloMode===7){
+    return 'backdrop-filter filter-five'
   }
 }
 
 
-function log(){
-  console.log("_____________________________")
-  console.log(backgroundAudio[0].audio.playing());
-  console.log(backgroundAudio[1].audio.playing());
-  console.log(backgroundAudio[2].audio.playing());
-  console.log(backgroundAudio[3].audio.playing());
-  console.log(backgroundAudio[4].audio.playing());
-  console.log(backgroundAudio[5].audio.playing());
-  console.log(backgroundAudio[6].audio.playing());
+
+function haloblur(){
+  if(haloMode===0){
+    return 'backdrop-filter'
+  }else if(haloMode===1){
+    return 'backdrop-filter'
+  }else if(haloMode===2){
+    return 'backdrop-filter'
+  }else if(haloMode===3){
+    return 'backdrop-filter filter-one'
+  }else if(haloMode===4){
+    return 'backdrop-filter filter-two'
+  }else if(haloMode===5){
+    return 'backdrop-filter filter-three'
+  }else if(haloMode===6){
+    return 'backdrop-filter filter-four'
+  }else if(haloMode===7){
+    return 'backdrop-filter filter-five'
+  }
 }
+
+
+
 
 
 

@@ -5,15 +5,15 @@ import { scriptMeetTheWeaver } from '../data/textData';
 import StoryText from '../components/StoryText';
 import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
 import { backgroundAudio } from '../data/backgroundAudioData';
-import { updateHalo } from '../reducers/haloMode/haloModeSlice';
-import { useDispatch } from 'react-redux';
+
+
 
 
 
 
 const MeetTheWeaver = () => {
  
-  const dispatch = useDispatch()
+
 
   let scriptLength:number = scriptMeetTheWeaver.length;
   const [temp, setTemp]= useState ([scriptMeetTheWeaver[0]]);

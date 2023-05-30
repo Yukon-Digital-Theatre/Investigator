@@ -4,21 +4,15 @@ const EndingICCEmail = () => {
   return (
   
     
-    <div className='introText letter'>Email from Representative of the Family
-    Subject: Information on Weaver #11
-    Hello Investigator,
-    
-We are reaching out to you on behalf of the parents of an incarcerated individual who is referred to as Weaver #11 in your files.
+    <div className='introText letter'>Email from 	Email from the International Criminal Court
+		Subject: Exit Interview November 15
+		Hello,
+Just wanted to quickly let you know prior to your exit interview we are particularly interested in any notes or recollections you have from your interrogation of Weaver #11. We understand this suspect ran away and was never apprehended. While we have released a number of weavers due to insufficient evidence there are a handful we are detaining as there was a consultation process in which some weavers were told about the origins of the yarn. We have identified a number of weavers who participated in this process, but several remain unidentified. We have descriptions of some of these and believe Weaver #11 may be a match.
 
-The parents have had no contact with their child since May, six months after being taken into custody in late November. A trial has still not occurred and there have been no updates.
+Thank you in advance,
 
-After extensive research we discovered you were the arresting investigator and wondered if you may have personal notes or access to internal information to help locate Weaver #11 in the prison system and allow this family to be reunited.
+ICC Administration
 
-As you can imagine, they are very anxious for any updates on the trial, but mostly want to make sure their child is still alive following these reports of prison conditions being released.
-
-Thank you for your time and attention,
-
-Samharan Prisoners’ Rights Association
 </div>
 
   )
