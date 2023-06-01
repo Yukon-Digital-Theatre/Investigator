@@ -5,8 +5,9 @@ const EndingFamilyEmail = () => {
    
     
     <div className='introText letter'>
+
       <p><b>Email from Representative of the Family</b></p>
-    <p><b>Subject: Information on Weaver #11</p></b>
+    <p><b>Subject: Information on Weaver #11</b></p>
       <p>Hello Investigator,</p>
     
 <p>We are reaching out to you on behalf of the parents of an incarcerated individual who is referred to as Weaver #11 in your files.</p>
