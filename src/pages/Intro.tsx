@@ -12,7 +12,7 @@ dispatch(updateHalo(0));
 function helper(){
   setStyle(true);
   setTimeout(() => {
-    dispatch(updatePage("TitlePage"));
+    dispatch(updatePage("AccessabilityCompatability"));
 
   }, 2000);
 }
