@@ -1,9 +1,182 @@
-import  { useState } from 'react'
-import { scriptEndingOne } from '../data/textData'
+import  { useEffect, useRef, useState } from 'react'
+import { choiceTextData, scriptEndingOne } from '../data/textData'
 import StoryText from '../components/StoryText'
 import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
+import { Howl } from 'howler'
+import { useSelector, useDispatch } from 'react-redux'
+import Choice from '../components/Choice'
+import { femaleAudio, maleAudio, nonBinaryAudio } from '../data/characterAudioData'
+import { updatePage } from '../reducers/currentPage/currentPageSlice'
+import { femaleChoiceTextData, maleChoiceTextData, nonBinaryChoiceTextData } from '../data/timingData'
+import { ReactComponent as PlayButton } from '../images/svgs/lni_lni-play.svg';
+import { ReactComponent as PauseButton } from '../images/svgs/pause.svg';
+
+
+
+
+
 
 const EndingOne = () => {
+  
+
+  const narratorTextMode = useSelector((state:any)=> state.textMode.text);
+  const narratorMode = useSelector((state:any)=> state.narratorAudioMode.audio);
+  const invTextMode = useSelector((state:any)=> state.invTextMode.text);
+  const invMode = useSelector((state:any)=> state.invAudioMode.audio);
+  const voicePref = useSelector((state:any)=> state.voicePref.voice);
+  
+
+  
+  
+ 
+  if(narratorMode&&narratorTextMode){
+     return(<div/>)
+    }else if (narratorMode&&!narratorTextMode){
+      return(<EndingOneAudioOnly/>)
+    }else{
+      return(<EndingOneTextOnly/>)
+    }
+
+
+}
+
+export default EndingOne
+
+const EndingOneAudioOnly = () =>{
+
+  const dispatch= useDispatch();
+  const voicePref = useSelector((state:any)=> state.voicePref.voice);
+const id=8;
+  let dialogue: Howl;
+  const [audioEnded, setAudioEnded] = useState(false);
+  let choiceData;
+
+  if(voicePref==="female"){
+     dialogue=femaleAudio[id].audio;
+     choiceData=femaleChoiceTextData;
+  }else if(voicePref==="male"){
+     dialogue=maleAudio[id].audio;
+     choiceData=maleChoiceTextData;
+  }else{
+     dialogue=nonBinaryAudio[id].audio;
+     choiceData=nonBinaryChoiceTextData;
+  }
+
+  useEffect(() => {
+    if(!dialogue.playing()){
+      dialogue.play();
+      startInterval();
+
+queryAudioTime();
+    }
+  return () => { 
+  }
+}, [])
+
+const [audioTime, setAudioTime] = useState(0);
+   
+    function queryAudioTime() {
+        setAudioTime(dialogue.seek());
+    }   
+  const intervalref = useRef<number | null>(null);
+
+  
+  const startInterval = () => {
+    if (intervalref.current !== null) return;
+    intervalref.current = window.setInterval(() => {
+      queryAudioTime();
+    }, 100);
+  };
+
+  
+  const stopInterval = () => {
+    if (intervalref.current) {
+      window.clearInterval(intervalref.current);
+      intervalref.current = null;
+    }
+  };
+
+ 
+  useEffect(() => {
+    return () => {
+      if (intervalref.current !== null) {
+        window.clearInterval(intervalref.current);
+      }
+    };
+  }, []);
+
+
+
+useEffect(() => {
+    console.log(audioTime);
+
+  return () => {
+    
+  }
+}, [audioTime])
+ 
+
+
+
+const [togglePlay, setTogglePlay] = useState(true)
+
+
+function helper() {
+  if(dialogue.playing()){
+      dialogue.pause();
+      stopInterval();
+      setTogglePlay(false);
+  }else{
+dialogue.play();
+startInterval();
+setTogglePlay(true);
+
+queryAudioTime();
+
+
+
+
+
+  }
+
+  
+}
+
+useEffect(() => {
+  
+
+  return () => {
+  
+  }
+}, [togglePlay])
+
+  dialogue.on("end", ()=> helper2() )
+  
+
+function helper2(){
+  setTimeout(() => {dispatch(updatePage("WhatNowOne"))}, 100);
+}
+
+
+
+  return(
+
+
+
+<div>
+      
+      {audioTime>=choiceData[id].time&&<Choice id={id}/>}
+      <div className='navbar'>
+     {togglePlay?<PauseButton onClick={()=>helper()}/>:<PlayButton onClick={()=>helper()}/>}
+     </div>
+       </div>
+  )
+
+}
+
+
+
+const EndingOneTextOnly = () => {
   let scriptLength:number = scriptEndingOne.length;
   const [temp, setTemp]= useState ([scriptEndingOne[0]]);
   const [disabled, setDisabled]= useState (false);
@@ -52,4 +225,3 @@ const EndingOne = () => {
   )
 }
 
-export default EndingOne

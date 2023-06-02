@@ -1,11 +1,172 @@
-import { useState } from 'react'
-import { scriptEndingTwoA } from '../data/textData'
+import { useEffect, useRef, useState } from 'react'
+import { choiceTextData, scriptEndingTwoA } from '../data/textData'
 import StoryText from '../components/StoryText'
 import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
+import { Howl } from 'howler'
+import { useSelector, useDispatch } from 'react-redux'
+import Choice from '../components/Choice'
+import { femaleAudio, maleAudio, nonBinaryAudio } from '../data/characterAudioData'
+import { updatePage } from '../reducers/currentPage/currentPageSlice'
+import { femaleChoiceTextData, maleChoiceTextData, nonBinaryChoiceTextData } from '../data/timingData'
+import { ReactComponent as PlayButton } from '../images/svgs/lni_lni-play.svg';
+import { ReactComponent as PauseButton } from '../images/svgs/pause.svg';
+import { narratorAudio } from '../data/narratorAudioData'
+
+
+
+
+
 
 
 
 const EndingTwoA = () => {
+  
+
+  const narratorTextMode = useSelector((state:any)=> state.textMode.text);
+  const narratorMode = useSelector((state:any)=> state.narratorAudioMode.audio);
+  const invTextMode = useSelector((state:any)=> state.invTextMode.text);
+  const invMode = useSelector((state:any)=> state.invAudioMode.audio);
+  const voicePref = useSelector((state:any)=> state.voicePref.voice);
+  
+
+  
+  
+ 
+  if(narratorMode&&narratorTextMode){
+     return(<div/>)
+    }else if (narratorMode&&!narratorTextMode){
+      return(<EndingTwoAAudioOnly/>)
+    }else{
+      return(<EndingTwoATextOnly/>)
+    }
+
+
+}
+
+export default EndingTwoA
+
+const EndingTwoAAudioOnly = () =>{
+
+  const dispatch= useDispatch();
+  const voicePref = useSelector((state:any)=> state.voicePref.voice);
+const dialogue = narratorAudio[10].audio;
+  const [audioEnded, setAudioEnded] = useState(false);
+  
+  useEffect(() => {
+    if(!dialogue.playing()){
+      dialogue.play();
+      startInterval();
+
+queryAudioTime();
+    }
+  return () => { 
+  }
+}, [])
+
+const [audioTime, setAudioTime] = useState(0);
+   
+    function queryAudioTime() {
+        setAudioTime(dialogue.seek());
+    }   
+  const intervalref = useRef<number | null>(null);
+
+  
+  const startInterval = () => {
+    if (intervalref.current !== null) return;
+    intervalref.current = window.setInterval(() => {
+      queryAudioTime();
+    }, 100);
+  };
+
+  
+  const stopInterval = () => {
+    if (intervalref.current) {
+      window.clearInterval(intervalref.current);
+      intervalref.current = null;
+    }
+  };
+
+ 
+  useEffect(() => {
+    return () => {
+      if (intervalref.current !== null) {
+        window.clearInterval(intervalref.current);
+      }
+    };
+  }, []);
+
+
+
+useEffect(() => {
+    console.log(audioTime);
+
+  return () => {
+    
+  }
+}, [audioTime])
+ 
+
+
+
+const [togglePlay, setTogglePlay] = useState(true)
+
+
+function helper() {
+  if(dialogue.playing()){
+      dialogue.pause();
+      stopInterval();
+      setTogglePlay(false);
+  }else{
+dialogue.play();
+startInterval();
+setTogglePlay(true);
+
+queryAudioTime();
+
+
+
+
+
+  }
+
+  
+}
+
+useEffect(() => {
+  
+
+  return () => {
+  
+  }
+}, [togglePlay])
+
+  dialogue.on("end", ()=> helper2() )
+  
+
+function helper2(){
+  setTimeout(() => {dispatch(updatePage("WhatNowTwoA"))}, 100);
+}
+
+
+
+  return(
+
+
+
+<div>
+      
+    
+      <div className='navbar'>
+     {togglePlay?<PauseButton onClick={()=>helper()}/>:<PlayButton onClick={()=>helper()}/>}
+     </div>
+       </div>
+  )
+
+}
+
+
+
+const EndingTwoATextOnly = () => {
   let scriptLength:number = scriptEndingTwoA.length;
   const [temp, setTemp]= useState ([scriptEndingTwoA[0]]);
   const [disabled, setDisabled]= useState (false);
@@ -54,4 +215,3 @@ const EndingTwoA = () => {
   )
 }
 
-export default EndingTwoA
