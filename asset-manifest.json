@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Investigator/static/css/main.525dfcff.css",
+    "main.css": "/Investigator/static/css/main.130c1075.css",
     "main.js": "/Investigator/static/js/main.d793a607.js",
     "static/media/LOOP 2 MEET THE WEAVER.wav": "/Investigator/static/media/LOOP 2 MEET THE WEAVER.29013ddc68baf89166cd.wav",
     "static/media/LOOP 1 PRESTORY.wav": "/Investigator/static/media/LOOP 1 PRESTORY.8311264442cf0dac9f56.wav",
@@ -14,11 +14,11 @@
     "static/media/lni_lni-volume-mute.svg": "/Investigator/static/media/lni_lni-volume-mute.0303c157e548c8b7625631ba6a147a49.svg",
     "index.html": "/Investigator/index.html",
     "static/media/lni_lni-chevron-right.svg": "/Investigator/static/media/lni_lni-chevron-right.829d5b643f0f56c1e54868dcce4d12bb.svg",
-    "main.525dfcff.css.map": "/Investigator/static/css/main.525dfcff.css.map",
+    "main.130c1075.css.map": "/Investigator/static/css/main.130c1075.css.map",
     "main.d793a607.js.map": "/Investigator/static/js/main.d793a607.js.map"
   },
   "entrypoints": [
-    "static/css/main.525dfcff.css",
+    "static/css/main.130c1075.css",
     "static/js/main.d793a607.js"
   ]
 }
