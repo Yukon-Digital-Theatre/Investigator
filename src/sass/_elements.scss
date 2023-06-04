@@ -125,7 +125,13 @@ animation-duration:3s;
     letter-spacing: 0.2em;
     
   }
-
+  .LoadingAnimation{
+    animation-name: loading;
+  animation-iteration-count: infinite;
+  animation-duration:2s;
+  
+  
+    }
   .introText{
     display: flex;
     justify-content: center;

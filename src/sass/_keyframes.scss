@@ -115,6 +115,20 @@
 }
 }
 
+@keyframes loading {
+  0% {
+    opacity: 1;
+    color:#FFFFFF;
+  }
+  50%{
+    opacity:0.5;
+    color:#000000;
+  }
+  100% {
+    opacity: 1;
+    color:#FFFFFF;
+  }
+}
 @keyframes halofivetrans {
   0%{
     opacity:1;
