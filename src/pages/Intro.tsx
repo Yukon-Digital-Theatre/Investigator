@@ -56,7 +56,7 @@ setLoadPercent(loadAmount/29);
   console.log("Loading...")
 
   
-  }, 1000);
+  }, 500);
 
 
 
