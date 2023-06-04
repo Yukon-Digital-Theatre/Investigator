@@ -53,7 +53,7 @@ setLoadPercent(loadAmount/29);
     setLoaded(true);
     clearInterval(intid);
   }
-
+  console.log("Loading...")
 
   
   }, 1000);
