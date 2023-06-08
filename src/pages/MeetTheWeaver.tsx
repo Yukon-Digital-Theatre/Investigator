@@ -135,12 +135,15 @@ const id=0;
 
 
   useEffect(() => {
-    if(!dialogue.playing()){
-      dialogue.play();
-      startInterval();
-
-queryAudioTime();
-    }
+    setTimeout(() => {
+      if(!dialogue.playing()){
+        dialogue.play();
+        startInterval();
+  
+  queryAudioTime();
+      }
+    }, 3000)
+   
   return () => { 
   }
 }, [])
