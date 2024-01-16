@@ -11,7 +11,7 @@
     width:80%;
     padding: 2vh;
     position: relative;
-    font-size: 1.5vh;
+    font-size: 2vh;
    
     
   }
@@ -46,4 +46,6 @@
 
   .lettercontainer{
     overflow-y: scroll;
+    overflow-x: hidden;
+    width: calc(100vw);
   }

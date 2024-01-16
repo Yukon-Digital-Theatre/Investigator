@@ -6,10 +6,10 @@ import { nonBinaryEndingTwoTextTiming } from '../data/textTimingData'
 import StoryTextAuto from '../components/StoryTextAuto'*/
 import { ReactComponent as ArrowButton } from '../images/svgs/lni_lni-chevron-right.svg'
 import { Howl } from 'howler'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Choice from '../components/Choice'
 import { femaleAudio, maleAudio, nonBinaryAudio } from '../data/characterAudioData'
-import { femaleChoiceTextData, maleChoiceTextData, nonBinaryChoiceTextData } from '../data/timingData'
+import { femaleChoiceTextData, femaleEndingTwoTextTiming, maleChoiceTextData, maleEndingTwoTextTiming, nonBinaryChoiceTextData, nonBinaryEndingTwoTextTiming } from '../data/timingData'
 import { ReactComponent as PlayButton } from '../images/svgs/lni_lni-play.svg';
 import { ReactComponent as PauseButton } from '../images/svgs/pause.svg';
 
@@ -29,7 +29,7 @@ const EndingTwo = () => {
 
 
   if(narratorMode&&narratorTextMode){
-    return(<div/>)
+    return(<EndingTwoBoth/>)
    }else if (narratorMode&&!narratorTextMode){
      return(<EndingTwoAudioOnly/>)
    }else{
@@ -42,8 +42,186 @@ const EndingTwo = () => {
 export default EndingTwo 
 
 
+const EndingTwoBoth = () =>{
+
+  const dispatch= useDispatch();
+  const voicePref = useSelector((state:any)=> state.voicePref.voice);
+const id=9;
+  let dialogue: Howl;
+  
 
 
+
+
+
+
+
+
+  let choiceData: any[];
+  const [audioEnded, setAudioEnded] = useState(false);
+  if(voicePref==="female"){
+     dialogue=femaleAudio[id].audio;
+     choiceData=femaleEndingTwoTextTiming;
+  }else if(voicePref==="male"){
+     dialogue=maleAudio[id].audio;
+     choiceData=maleEndingTwoTextTiming;
+  }else{
+     dialogue=nonBinaryAudio[id].audio;
+     choiceData=nonBinaryEndingTwoTextTiming;
+  }
+
+  const [temp, setTemp]= useState ([choiceData[0]]);
+  const [audioTime, setAudioTime] = useState(0);
+ 
+  function queryAudioTime() {
+      setAudioTime(dialogue.seek());
+  }   
+const intervalref = useRef<number | null>(null);
+
+
+
+
+const startInterval = () => {
+  if (intervalref.current !== null) return;
+  intervalref.current = window.setInterval(() => {
+    queryAudioTime();
+  }, 100);
+};
+
+
+const stopInterval = () => {
+  if (intervalref.current) {
+    window.clearInterval(intervalref.current);
+    intervalref.current = null;
+  }
+};
+
+
+useEffect(() => {
+  return () => {
+    if (intervalref.current !== null) {
+      window.clearInterval(intervalref.current);
+    }
+  };
+}, []);
+
+
+
+useEffect(() => {
+  console.log(audioTime);
+
+
+return () => {
+  
+}
+}, [audioTime])
+
+
+const [togglePlay, setTogglePlay] = useState(true)
+
+
+function helper() {
+if(dialogue.playing()){
+    dialogue.pause();
+    stopInterval();
+    setTogglePlay(false);
+}else{
+dialogue.play();
+startInterval();
+setTogglePlay(true);
+
+queryAudioTime();
+
+
+
+
+
+}
+
+
+}
+
+useEffect(() => {
+
+
+return () => {
+
+}
+}, [togglePlay])
+
+
+
+
+dialogue.on("end", ()=> helperOnEnd() )
+
+
+function helperOnEnd(){
+  dialogue.seek(dialogue.duration()-0.05);
+  dialogue.pause();
+  setTogglePlay(false);
+}
+
+function helper2(){
+
+  choiceData.map((item,index)=>{
+    if(item.enterTime<=audioTime && audioTime<=item.exitTime){
+      if(!temp.includes(item)){
+      temp.push(item)
+      }
+     
+      
+    }
+    if(temp.length>4){
+    if(temp[0].exitTime<=audioTime){
+      
+      
+        temp.shift();
+        }
+      }
+    
+    
+})
+  
+console.log(temp)
+return (<div/>)
+}
+
+const [style, setStyle] = useState(false);
+useEffect(() => {
+  setTimeout(() => {
+    if(!dialogue.playing()){
+      dialogue.play();
+      startInterval();
+
+queryAudioTime();
+    }
+    setStyle(true);
+  },2000);
+  
+return () => { 
+}
+}, [])
+
+
+return (
+    
+  <div className='story_container'> 
+       
+  {helper2()}
+  
+
+
+<div className={style?'fadeIn':'inactiveText'} style={{'backgroundColor':"transparent",'display':"flex",'width':"100%", 'flexDirection': 'column',
+'justifyContent': 'flex-end',
+'alignItems': 'center'}as React.CSSProperties}>
+{temp.map((item, index) => { return <StoryText key={item.id} item={item} leaving={temp.length > 8 && index === 0} />; })}
+</div>
+<div className='navbar'>
+{togglePlay?<PauseButton onClick={()=>helper()}/>:<PlayButton onClick={()=>helper()}/>}
+</div>
+</div>
+  )
+}
 
 const EndingTwoAudioOnly = () =>{
  
@@ -65,16 +243,18 @@ const id=9;
 
 
   useEffect(() => {
-    if(!dialogue.playing()){
-      dialogue.play();
-      startInterval();
-
-queryAudioTime();
-    }
+    setTimeout(() => {
+      if(!dialogue.playing()){
+        dialogue.play();
+        startInterval();
+  
+  queryAudioTime();
+      }
+    },2000);
+    
   return () => { 
   }
-}, [])
-
+  }, [])
 const [audioTime, setAudioTime] = useState(0);
    
     function queryAudioTime() {
@@ -234,94 +414,3 @@ return (
 
 
 
-
-
-
-/*
-    const audio=nonBinaryAudio[9].audio;
-    const [audioTime, setAudioTime] = useState(0);
-    let temp: textTiming[] =[]
-    let leaving: number [] =[]
-    
-    
-    function queryAudioTime() {
-        
-        setAudioTime(audio.seek());
-        audio.on('end', function(){
-            console.log("ENDED");
-            audio.seek(audio.duration()-0.01);
-            
-        })
-        
-    }   
-    
-  const intervalref = useRef<number | null>(null);
-
-  
-  const startInterval = () => {
-    if (intervalref.current !== null) return;
-    intervalref.current = window.setInterval(() => {
-      queryAudioTime();
-    }, 100);
-  };
-
-  
-  const stopInterval = () => {
-    if (intervalref.current) {
-      window.clearInterval(intervalref.current);
-      intervalref.current = null;
-    }
-  };
-
- 
-  useEffect(() => {
-    return () => {
-      if (intervalref.current !== null) {
-        window.clearInterval(intervalref.current);
-      }
-    };
-  }, []);
-
-useEffect(() => {
-    console.log(audioTime);
-
-  return () => {
-    
-  }
-}, [audioTime])
-
-
-
-
-  function helper() {
-    
-    if(audio.playing()){
-        audio.pause();
-        stopInterval();
-    }else{
-audio.play();
-startInterval();
-
-
-    }
-    
-  }
-
-  function helper2(){
-    
-    nonBinaryEndingTwoTextTiming.map((item,index)=>{
-      if(item.enterTime<=audioTime && audioTime<=item.exitTime+1){
-        temp.push(item)
-        
-      }
-      
-      
-  })
-  console.log(temp)
-}
-
-
-
-
-
-*/

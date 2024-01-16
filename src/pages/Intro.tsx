@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updatePage } from '../reducers/currentPage/currentPageSlice';
 import { useState } from 'react';
 import { updateHalo } from '../reducers/haloMode/haloModeSlice';
@@ -6,6 +6,7 @@ import { updateInvAudioDelivery } from '../reducers/invAudioDeliveryMode/invAudi
 import { updateNarratorAudioDelivery } from '../reducers/narratorAudioDeliveryMode/narratorAudioDeliveryModeSlice';
 import { updateTextDelivery } from '../reducers/textDeliveryMode/textDeliveryModeSlice';
 import { narratorAudio } from '../data/narratorAudioData';
+
 
 const Intro = () => {
 
@@ -45,7 +46,9 @@ function helper(){
   
 
 
+const wrapUpVisited = useSelector((state: any)=>state.wrapUpVisited.mode);
 
+if(!wrapUpVisited){
 
 
  intid=setInterval(() => {
@@ -84,7 +87,9 @@ function helper(){
     
     }, 100);
 
-
+  }else{
+    setLoaded(true);
+  }
 
 
 
@@ -92,7 +97,7 @@ function helper(){
     <>
 
       
-        {loaded && <div className='Button introBigText outlineText' style={style ? { "animationName": "fade-out" } : { "animationName": "fade-in" }} onClick={() => helper()}>Click Here To Begin</div> }
+        {loaded && <div className='Button introBigText outlineText fadeIn' style={style ? { "animationName": "fade-out" } : { "animationName": "fade-in" }} onClick={() => helper()}>Click Here To Begin</div> }
 
 
 {!loaded&&<div className='loadingText outlineText LoadingAnimation'>Loading</div>}

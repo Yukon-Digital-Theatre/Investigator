@@ -10,7 +10,7 @@ import { updateHalo } from "../reducers/haloMode/haloModeSlice";
 
 const WeaverContainer = styled.div<{ leaving: boolean }>`
 font-family: 'Noto Serif', serif;
-font-size: 1.2vw;
+font-size: 1.225vw;
 font-weight: 1000;
 line-height: 3.22581vh;
 color: #000000;
@@ -24,6 +24,7 @@ animation-name: fade-in;
 animation-fill-mode:forwards;
 animation-duration:1s;
 text-align: left;
+
 ${ props => props.leaving && css`
     animation-name:fade-out;
   `};
@@ -32,7 +33,7 @@ ${ props => props.leaving && css`
 const WeaverBridgeContainer = styled.div<{ leaving: boolean }>`
 font-family: 'Noto Serif', serif;
 color: #000000;
-font-size: 1.2vw;
+font-size: 1.225vw;
 font-weight: 1000;
 line-height: 3.22581vh;
 letter-spacing: 0.05em;
@@ -97,12 +98,13 @@ ${ props => props.leaving && css`
 
 const NarratorContainer = styled.div<{ leaving: boolean }>`
 padding:1vh;
+align-self: flex-start;
 font-family: 'Special Elite', cursive;
 padding-bottom:2vh;
 font-size: 1.3vw;
 font-weight: 400;
-line-height: 2.49740vh;
-letter-spacing: 0.2em;
+line-height: calc(2.6vh + 0.4vw);
+letter-spacing: 0.35em;
 text-align: left;
 background-color:transparent;
 animation-name: fade-in;
@@ -114,14 +116,14 @@ ${ props => props.leaving && css`
 `;
 
 const ButtonContainer = styled.div<{ leaving: boolean }>`
-padding:5vh;
+padding-top:5vh;
 font-family: 'Special Elite', cursive;
 padding-bottom:4vh;
-
+width: 100%;
 font-size: 1.3vw;
 font-weight: 400;
-line-height: 2.49740vh;
-letter-spacing: 0.2em;
+line-height: calc(2.6vh + 0.4vw);
+letter-spacing: 0.35em;
 text-align: left;
 background-color:transparent;
 animation-name: fade-in;
@@ -148,7 +150,7 @@ const StoryText = ({item, leaving}:props) => {
 const dispatch = useDispatch();
 
   function redirect(){
-    if(item.text==="Go along with it, you might learn more "){
+    if(item.text==="Go along with it, you might learn more"){
       backgroundAudio[1].audio.fade(1,0,3000);
       dispatch(updateHalo(3));
       setTimeout(() => {
@@ -159,7 +161,7 @@ const dispatch = useDispatch();
       setTimeout(() => {
         backgroundAudio[1].audio.pause();
       }, 3000);
-    }else if(item.text==="Clarify why you are really here, you don’t have all day "){
+    }else if(item.text==="Clarify why you are really here, you don’t have all day"){
       backgroundAudio[1].audio.fade(1,0,3000);
       dispatch(updateHalo(3));
       setTimeout(() => {
@@ -171,10 +173,14 @@ const dispatch = useDispatch();
     setTimeout(() => {
       backgroundAudio[1].audio.pause();
     }, 3000);
-    }else if(item.text==="The weaver keeps weaving. You know it’s time to be more honest."){
+    }else if(item.text==="Continue"&&item.id===121){
       setTimeout(() => {
       dispatch(updatePage("DownToBusiness"))
     }, 1000);
+  }else if(item.text==="Continue"&&item.id===242){
+    setTimeout(() => {
+    dispatch(updatePage("DownToBusiness"))
+  }, 1000);
     }else if(item.text==="Yes, you don’t want the weaver to shut down. Keep asking simple questions."){
       backgroundAudio[2].audio.fade(1,0,3000);
       dispatch(updateHalo(4));
@@ -203,6 +209,10 @@ const dispatch = useDispatch();
       setTimeout(() => {
       dispatch(updatePage("NewTactic"))
     }, 1000);
+  }else if(item.text==="Continue"&&item.id===46){
+    setTimeout(() => {
+    dispatch(updatePage("NewTactic"))
+  }, 1000);
     }else if(item.text==="No, the weaver must have known, you’ll need to apply more pressure to get the truth, to get a confession."){
       backgroundAudio[3].audio.fade(1,0,3000);
       dispatch(updateHalo(5));
@@ -231,7 +241,11 @@ const dispatch = useDispatch();
       setTimeout(() => {
       dispatch(updatePage("BreakItDown"))
     }, 1000);
-    }else if(item.text==="Yes, it might be important "){
+  }else if(item.text==="Continue"&&item.id===36){
+    setTimeout(() => {
+    dispatch(updatePage("BreakItDown"))
+  }, 1000);
+    }else if(item.text==="Yes, it might be important"){
       backgroundAudio[4].audio.fade(1,0,3000);
       dispatch(updateHalo(6));
       setTimeout(() => {
@@ -243,7 +257,7 @@ const dispatch = useDispatch();
     setTimeout(() => {
       backgroundAudio[4].audio.pause();
     }, 3000);
-    }else if(item.text==="No, if it was that important it would be a phone call "){
+    }else if(item.text==="No, if it was that important it would be a phone call"){
       backgroundAudio[4].audio.fade(1,0,3000);
       dispatch(updateHalo(6));
       setTimeout(() => {
@@ -255,7 +269,7 @@ const dispatch = useDispatch();
     setTimeout(() => {
       backgroundAudio[4].audio.pause();
     }, 3000);
-    }else if(item.text==="You Watch"){
+  }else if(item.text==="Continue"&&item.id===6){
       setTimeout(() => {
       dispatch(updatePage("Admission"))
     }, 1000);
@@ -318,6 +332,9 @@ const dispatch = useDispatch();
    <>
    {item.speaker === "narrator"?(
     <NarratorContainer leaving={leaving} className="outlineText">{item.text}</NarratorContainer>
+    
+    
+    
     ):item.speaker === "investigator"?(
       <div style={{'backgroundColor':"transparent",'alignSelf':"flex-end", 'alignContent':"right"}as React.CSSProperties}>
     <InvestigatorContainer leaving={leaving} className="outlineText">{item.text}</InvestigatorContainer>
@@ -346,9 +363,15 @@ const dispatch = useDispatch();
     
     
     
+    ):item.text === "Continue"?(
+
+      <WeaverContainer leaving={leaving} onAnimationEnd={() => redirect()}></WeaverContainer>
+    
+    
+    
     ):(
      
-          <div style={{'backgroundColor':"transparent",'alignSelf':"flex-start"}as React.CSSProperties}>
+          <div style={{'backgroundColor':"transparent",'alignSelf':"flex-start",'width':"100%"}as React.CSSProperties}>
         <ButtonContainer leaving = {false} className="choiceButton outlineText" onClick={() => redirect()}>{item.text}</ButtonContainer>
         
         </div>

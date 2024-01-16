@@ -1,4 +1,11 @@
 
+.LoadingAnimation{
+  animation-name: loading;
+animation-iteration-count: infinite;
+animation-duration:2s;
+
+
+  }
 
 
 
@@ -13,6 +20,7 @@
 .Button {
   background-color:transparent;
 padding:1%;
+
 width:fit-content;
 white-space: nowrap;
   &:hover{
@@ -31,6 +39,8 @@ white-space: nowrap;
     color: gray;
     background-color:transparent;
   padding:1%;
+  
+pointer-events: none;
   width:fit-content;
   white-space: nowrap;
     &:hover{
@@ -46,6 +56,8 @@ white-space: nowrap;
 
 .disabled{
     opacity:0.4;
+    
+pointer-events: none;
    
   }
   .disabled:hover {
@@ -53,6 +65,20 @@ white-space: nowrap;
   }
   .disabled:active {
     filter: drop-shadow(0px 0px 0px #000000) 
+  }
+
+  .backdrop-filter-background{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    text-align:center;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    height:100vh;
   }
 
   .backdrop-filter{
@@ -114,6 +140,24 @@ animation-duration:3s;
 
   }
 
+  .mainTitleText{
+    display: flex;
+    justify-content: center;
+    
+    
+        padding:1vh;
+    font-family: 'Special Elite', cursive;
+    padding-bottom:1vh;
+    font-size: 4.25vw;
+    font-weight: 400;
+    line-height: 2.49740vh;
+    letter-spacing: 0.2em;
+    text-align: left;
+    background-color:transparent;
+ 
+    
+      }
+
   .loadingText{
   
     font-family: 'Special Elite', cursive;
@@ -125,13 +169,14 @@ animation-duration:3s;
     letter-spacing: 0.2em;
     
   }
-  .LoadingAnimation{
-    animation-name: loading;
-  animation-iteration-count: infinite;
-  animation-duration:2s;
-  
-  
-    }
+
+.inactiveText{
+  opacity:0;
+  color:transparent;
+ 
+pointer-events: none;
+}
+
   .introText{
     display: flex;
     justify-content: center;
@@ -147,9 +192,7 @@ animation-duration:3s;
     letter-spacing: 0.2em;
     text-align: left;
     background-color:transparent;
-    animation-name: fade-in;
-    animation-fill-mode:forwards;
-    animation-duration:1s;
+   
     
       }
 
@@ -157,21 +200,85 @@ animation-duration:3s;
       margin-left: 8vw;
       margin-right: 8vw;
             display: flex;
-            justify-content: center;
+            justify-content: left;
             
             
                 padding:1vh;
             font-family: 'Special Elite', cursive;
             padding-bottom:1vh;
-            font-size: 2.25vw;
+            font-size: 1.75vw;
             font-weight: 400;
             line-height: 5.49740vh;
             letter-spacing: 0.2em;
             text-align: left;
             background-color:transparent;
-            animation-name: fade-in;
-            animation-fill-mode:forwards;
-            animation-duration:1s;
+           
             
               }
-    
+              .introMedText{
+                margin-left: 8vw;
+                margin-right: 8vw;
+                      display: flex;
+                      justify-content: center;
+                      
+                      
+                          padding:1vh;
+                      font-family: 'Special Elite', cursive;
+                      padding-bottom:1vh;
+                      font-size: 1.55vw;
+                      font-weight: 400;
+                      line-height: 2.69740vh;
+                      letter-spacing: 0.2em;
+                      text-align: left;
+                      background-color:transparent;
+                     
+                      
+                        }
+          
+
+              .fadeIn{
+                animation-name: fade-in;
+                animation-fill-mode:forwards;
+                animation-duration:1s;
+              }
+ div.artistsText{
+                display: flex;
+                justify-content: left;
+                margin-left: 2vw;
+                margin-right: 12vw;
+                
+                    padding:1vh;
+                font-family: 'Special Elite', cursive;
+                padding-bottom:1vh;
+                font-size: 1.25vw;
+                font-weight: 400;
+                line-height: 2.49740vh;
+                letter-spacing: 0.2em;
+                text-align: left;
+                background-color:transparent;
+               
+                
+                  }
+
+                  div.artistsBigText{
+                    display: flex;
+                    justify-content: left;
+                    margin-left: 2vw;
+                    margin-right: 12vw;
+                    
+                        padding:1vh;
+                    font-family: 'Special Elite', cursive;
+                    padding-bottom:1vh;
+                    font-size: 1.75vw;
+                    font-weight: 400;
+                    line-height: 5.49740vh;
+                    letter-spacing: 0.2em;
+                    text-align: left;
+                    background-color:transparent;
+                   
+                    
+                      }
+
+                    .artistHeadshot{
+                      align-self: flex-start;
+                    }

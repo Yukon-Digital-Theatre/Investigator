@@ -24,9 +24,6 @@
     letter-spacing: 0.2em;
     text-align: left;
     background-color:transparent;
-    animation-name: fade-in;
-    animation-fill-mode:forwards;
-    animation-duration:1s;
     width:100%;
     
       }
@@ -50,6 +47,17 @@
             background: linear-gradient(180deg, #8b8b8b 0%, rgba(217, 217, 217, 0) 100%);
           }
       }
+
+
+      
+      .WrapUpButtonDisabled{
+        padding:1%;
+        width:25vw;
+        margin: 0.5vh;
+        margin-bottom: 2vh;
+        color: transparent;
+        white-space: nowrap;
+        }
 
       .flexwrapupcontainer {
         display: flex;

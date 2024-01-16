@@ -11,7 +11,7 @@ import { Howl } from 'howler';
 import Choice from '../components/Choice';
 import { choiceTextData } from '../data/textData';
 import { updatePage } from '../reducers/currentPage/currentPageSlice';
-import { femaleChoiceTextData, maleChoiceTextData, nonBinaryChoiceTextData } from '../data/timingData';
+import { femaleChoiceTextData, femaleMeetTheWeaverTextTiming, maleChoiceTextData, maleMeetTheWeaverTextTiming, nonBinaryChoiceTextData, nonBinaryMeetTheWeaverTextTiming } from '../data/timingData';
 import { ReactComponent as PlayButton } from '../images/svgs/lni_lni-play.svg';
 import { ReactComponent as PauseButton } from '../images/svgs/pause.svg';
 
@@ -48,7 +48,7 @@ const MeetTheWeaver = () => {
   
  
   if(narratorMode&&narratorTextMode){
-     return(<MeetTheWeaverTextOnly/>)
+     return(<MeetTheWeaverBoth/>)
     }else if (narratorMode&&!narratorTextMode){
       return(<MeetTheWeaverAudioOnly/>)
     }else{
@@ -84,11 +84,20 @@ const MeetTheWeaverTextOnly = () =>{
     if(temp.length>4){
     temp.shift();
     }
-    setTimeout(() => {
-    }, 1000);
+    
     
    
     }
+    setTimeout(() => {
+      if(currentScriptIndex===(scriptLength-2)){
+        setDisabled(false);
+    setCurrentScriptIndex(scriptLength);
+    setTemp((temp)=>[...temp, scriptMeetTheWeaver[currentScriptIndex+1]]);
+    if(temp.length>4){
+    temp.shift();
+    }
+      }
+    }, 1);
   }
 
   
@@ -134,6 +143,7 @@ const id=0;
   }
 
 
+
   useEffect(() => {
     setTimeout(() => {
       if(!dialogue.playing()){
@@ -142,11 +152,12 @@ const id=0;
   
   queryAudioTime();
       }
-    }, 3000)
-   
+    },4000);
+    
   return () => { 
   }
 }, [])
+  
 
 const [audioTime, setAudioTime] = useState(0);
    
@@ -184,7 +195,7 @@ const [audioTime, setAudioTime] = useState(0);
 
 useEffect(() => {
     console.log(audioTime);
-
+ 
   return () => {
     
   }
@@ -261,17 +272,56 @@ useEffect(() => {
 
   const MeetTheWeaverBoth = () =>{
 
-  }
+    const dispatch= useDispatch();
+    const voicePref = useSelector((state:any)=> state.voicePref.voice);
+  const id=0;
+    let dialogue: Howl;
+    
 
-/* AUDIO STUFF
-    (const audio=femaleAudio[0].audio;
+
+
+
+  
+
+
+  
+    let choiceData: any[];
+    const [audioEnded, setAudioEnded] = useState(false);
+    if(voicePref==="female"){
+       dialogue=femaleAudio[id].audio;
+       choiceData=femaleMeetTheWeaverTextTiming;
+    }else if(voicePref==="male"){
+       dialogue=maleAudio[id].audio;
+       choiceData=maleMeetTheWeaverTextTiming;
+    }else{
+       dialogue=nonBinaryAudio[id].audio;
+       choiceData=nonBinaryMeetTheWeaverTextTiming;
+    }
+
+    const [temp, setTemp]= useState ([choiceData[0]]);
     const [audioTime, setAudioTime] = useState(0);
+    const [style, setStyle] = useState(false);
    
     function queryAudioTime() {
-        setAudioTime(audio.seek());
+        setAudioTime(dialogue.seek());
     }   
   const intervalref = useRef<number | null>(null);
 
+
+  useEffect(() => {
+    setTimeout(() => {
+      if(!dialogue.playing()){
+        dialogue.play();
+        startInterval();
+  
+  queryAudioTime();
+      }
+      setStyle(true);
+    },4000);
+    
+  return () => { 
+  }
+}, [])
   
   const startInterval = () => {
     if (intervalref.current !== null) return;
@@ -297,8 +347,11 @@ useEffect(() => {
     };
   }, []);
 
+
+
 useEffect(() => {
     console.log(audioTime);
+  
 
   return () => {
     
@@ -306,48 +359,96 @@ useEffect(() => {
 }, [audioTime])
 
 
+const [togglePlay, setTogglePlay] = useState(true)
 
 
-  function helper() {
-    if(audio.playing()){
-        audio.pause();
-        stopInterval();
-    }else{
-audio.play();
+function helper() {
+  if(dialogue.playing()){
+      dialogue.pause();
+      stopInterval();
+      setTogglePlay(false);
+  }else{
+dialogue.play();
 startInterval();
+setTogglePlay(true);
 
 queryAudioTime();
 
 
-    }
-    
+
+
+
+  }
+
+  
+}
+
+useEffect(() => {
+  
+
+  return () => {
+  
+  }
+}, [togglePlay])
+
+
+
+
+  dialogue.on("end", ()=> helperOnEnd() )
+  
+
+  function helperOnEnd(){
+    dialogue.seek(dialogue.duration()-0.05);
+    dialogue.pause();
+    setTogglePlay(false);
   }
 
   function helper2(){
-    
-    femaleMeetTheWeaverTextTiming.map((item,index)=>{
+  
+    choiceData.map((item,index)=>{
       if(item.enterTime<=audioTime && audioTime<=item.exitTime){
-        temp.push(item.text)
-        
+        if(!temp.includes(item)){
+        temp.push(item)
+        }
        
         
       }
+      if(temp.length>4){
+      if(temp[0].exitTime<=audioTime){
+        
+        
+          temp.shift();
+          }
+        }
       
       
   })
+    
   console.log(temp)
+  return (<div/>)
+}
+  
 
  return (
-      
-         <> 
-         
-        {helper2()}
-    <div onClick={()=>helper()}>play/pause</div>
-    <div>----------</div>
-    {temp.map((item,index)=>{return<div style={{'animationName':"fade-in",'animationDuration':"2s"}}>{item}</div>})}
-    <div>----------</div>
+  
+<div className='story_container'> 
+       
+       {helper2()}
+       
+     
+ 
+    <div className={style?'fadeIn':'inactiveText'} style={{'backgroundColor':"transparent",'display':"flex",'width':"100%", 'flexDirection': 'column',
+    'justifyContent': 'flex-end',
+    'alignItems': 'center'}as React.CSSProperties}>
+    {temp.map((item, index) => { return <StoryText key={item.id} item={item} leaving={temp.length > 8 && index === 0} />; })}
+    </div>
+    <div className='navbar'>
+    {togglePlay?<PauseButton onClick={()=>helper()}/>:<PlayButton onClick={()=>helper()}/>}
+    </div>
+   </div>
+    )
   }
-  */
+  
  
 
 
