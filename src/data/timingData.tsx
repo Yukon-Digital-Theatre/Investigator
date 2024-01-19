@@ -1411,14 +1411,14 @@ export const femaleNewTacticTextTiming =[
     {id:105, speaker:'narrator', text:"Weaver keeps weaving the hair.", enterTime: 324, exitTime: 328},
     {id:106, speaker:'narrator', text:"You try not to think about the piles of it you saw at Konauzec or the shaved heads in the graves.", enterTime: 326.7, exitTime: 334.4},
     {id:107, speaker:'narrator', text:"Was life here in the Capital so sheltered that this is outlandish to the weaver?", enterTime: 333.4, exitTime: 340.9},
-    {id:108, speaker:'narrator', text:"Do you think the weaver is telling the truth?.", enterTime: 340.7, exitTime: 3600},
+    {id:108, speaker:'narrator', text:"Do you think the weaver is telling the truth?", enterTime: 340.7, exitTime: 3600},
     {id:109, speaker:'choice', text:"Yes, you believe the weaver really doesn’t know and you’ll have to break it down to make the weaver realize so that more questions can be answered", enterTime: 344.5, exitTime: 3600},
     {id:110, speaker:'choice', text:"No, the weaver must have known, you’ll need to apply more pressure to get the truth, to get a confession.", enterTime: 344.51, exitTime: 3600},
 
 ]
 export const maleNewTacticTextTiming =[
         
-    {id:1, speaker:'investigator', text:"Best guess, what is the yarn made of?", enterTime: 0, exitTime: 5.3},
+    {id:1, speaker:'investigator', text:"Best guess, what is the yarn made of?", enterTime: 0.3, exitTime: 5.3},
     {id:2, speaker:'weaver', text:"What good would guessing do? (coughs)", enterTime: 3.9, exitTime: 7.7},
     {id:3, speaker:'investigator', text:"I need your educated guess. Last question.", enterTime: 6.1, exitTime: 11.5},
     {id:4, speaker:'weaver', text:"Well, well it’s definitely a mix. This, this is rough, so probably some type of", enterTime: 10, exitTime: 17},
@@ -1525,7 +1525,7 @@ export const maleNewTacticTextTiming =[
     {id:105, speaker:'narrator', text:"Weaver keeps weaving the hair.", enterTime: 314.9, exitTime: 318.9},
     {id:106, speaker:'narrator', text:"You try not to think about the piles of it you saw at Konauzec or the shaved heads in the graves.", enterTime: 317.8, exitTime: 325.6},
     {id:107, speaker:'narrator', text:"Was life here in the Capital so sheltered that this is outlandish to the weaver?", enterTime: 324.7, exitTime: 331.8},
-    {id:108, speaker:'narrator', text:"Do you think the weaver is telling the truth?.", enterTime: 331.3, exitTime: 3600},
+    {id:108, speaker:'narrator', text:"Do you think the weaver is telling the truth?", enterTime: 331.3, exitTime: 3600},
     {id:109, speaker:'choice', text:"Yes, you believe the weaver really doesn’t know and you’ll have to break it down to make the weaver realize so that more questions can be answered", enterTime: 336.1, exitTime: 3600},
     {id:110, speaker:'choice', text:"No, the weaver must have known, you’ll need to apply more pressure to get the truth, to get a confession.", enterTime: 336.11, exitTime: 3600},
 
@@ -1713,7 +1713,7 @@ export const femaleBreakItDownTextTiming =[
 ]
 export const maleBreakItDownTextTiming =[
         
-    {id:1, speaker:'investigator', text:"You said you’d heard of those places, you", enterTime: 0, exitTime: 3.7},
+    {id:1, speaker:'investigator', text:"You said you’d heard of those places, you", enterTime: 0.3, exitTime: 3.7},
     {id:2, speaker:'investigator', text:"know there have been massacres there. The", enterTime: 1.7, exitTime: 5.6},
     {id:3, speaker:'investigator', text:"old government collected their hair after", enterTime: 3.6, exitTime: 8},
     {id:4, speaker:'investigator', text:"murdering them", enterTime: 6, exitTime: 9.1},
@@ -1813,10 +1813,10 @@ export const maleBreakItDownTextTiming =[
 //---//
 export const femaleAdmissionTextTiming =[
         
-    {id:1, speaker:'narrator', text:"The weaver moves to a corner of the room, to a small desk.", enterTime: 0, exitTime: 4.85},
+    {id:1, speaker:'narrator', text:"The weaver moves to a corner of the room, to a small desk.", enterTime: 0.3, exitTime: 4.85},
     {id:2, speaker:'narrator', text:"Rummaging deep in one of the drawers.", enterTime: 3.25, exitTime: 7.25},
     {id:3, speaker:'narrator', text:"Suddenly you remember to be afraid.", enterTime: 5.53, exitTime: 10},
-    {id:4, speaker:'narrator', text:"What are you doing?", enterTime: 8.9, exitTime: 11.7},
+    {id:4, speaker:'investigator', text:"What are you doing?", enterTime: 8.9, exitTime: 11.7},
     {id:5, speaker:'narrator', text:"The weaver shows you a small box, too small for a gun or weapon.", enterTime: 10.4, exitTime: 17.1},
     {id:6, speaker:'narrator', text:"The weaver opens it and removes some thimbles and pins before finding a folded piece of paper.", enterTime: 16, exitTime: 23.67},
     {id:7, speaker:'weaver', text:"I’d, I knew the government didn’t, didn’t like them and – I was fine with", enterTime: 23, exitTime: 31.5},
@@ -1995,10 +1995,10 @@ export const femaleAdmissionTextTiming =[
 ]
 export const maleAdmissionTextTiming =[
         
-    {id:1, speaker:'narrator', text:"The weaver moves to a corner of the room, to a small desk.", enterTime: 0, exitTime: 4.85},
+    {id:1, speaker:'narrator', text:"The weaver moves to a corner of the room, to a small desk.", enterTime: 0.3, exitTime: 4.85},
     {id:2, speaker:'narrator', text:"Rummaging deep in one of the drawers.", enterTime: 3.25, exitTime: 7.25},
     {id:3, speaker:'narrator', text:"Suddenly you remember to be afraid.", enterTime: 5.53, exitTime: 10},
-    {id:4, speaker:'narrator', text:"What are you doing?", enterTime: 9.24, exitTime: 12.29},
+    {id:4, speaker:'investigator', text:"What are you doing?", enterTime: 9.24, exitTime: 12.29},
     {id:5, speaker:'narrator', text:"The weaver shows you a small box, too small for a gun or weapon.", enterTime: 10.60, exitTime: 17.19},
     {id:6, speaker:'narrator', text:"The weaver opens it and removes some thimbles and pins before finding a folded piece of paper.", enterTime: 16, exitTime: 23.67},
     {id:7, speaker:'weaver', text:"I’d, I knew the government didn’t, didn’t like them and – I was fine with", enterTime: 23, exitTime: 29.48},
@@ -2177,10 +2177,10 @@ export const maleAdmissionTextTiming =[
 ]
 export const nonBinaryAdmissionTextTiming =[
         
-    {id:1, speaker:'narrator', text:"The weaver moves to a corner of the room, to a small desk.", enterTime: 0, exitTime: 4.85},
+    {id:1, speaker:'narrator', text:"The weaver moves to a corner of the room, to a small desk.", enterTime: 0.3, exitTime: 4.85},
     {id:2, speaker:'narrator', text:"Rummaging deep in one of the drawers.", enterTime: 3.25, exitTime: 7.25},
     {id:3, speaker:'narrator', text:"Suddenly you remember to be afraid.", enterTime: 5.53, exitTime: 10},
-    {id:4, speaker:'narrator', text:"What are you doing?", enterTime: 8.7, exitTime: 12},
+    {id:4, speaker:'investigator', text:"What are you doing?", enterTime: 8.7, exitTime: 12},
     {id:5, speaker:'narrator', text:"The weaver shows you a small box, too small for a gun or weapon.", enterTime: 10.4, exitTime: 17.2},
     {id:6, speaker:'narrator', text:"The weaver opens it and removes some thimbles and pins before finding a folded piece of paper.", enterTime: 15.9, exitTime: 23.8},
     {id:7, speaker:'weaver', text:"I’d, I knew the government didn’t, didn’t like them and – I was fine with", enterTime: 22.6, exitTime: 29.4},
@@ -2362,7 +2362,7 @@ export const nonBinaryAdmissionTextTiming =[
 //---//
 export const femaleEndingTwoTextTiming =[
         
-    {id:1, speaker:'investigator', text:"Fine. Get out, quickly.", enterTime: 0, exitTime: 4.4},
+    {id:1, speaker:'investigator', text:"Fine. Get out, quickly.", enterTime: 0.3, exitTime: 4.4},
     {id:2, speaker:'weaver', text:"What?", enterTime: 2.8, exitTime: 5.6},
     {id:3, speaker:'investigator', text:"Leave. I’ll say you surprised me and got", enterTime: 3.8, exitTime: 8.1},
     {id:4, speaker:'investigator', text:"away, that I couldn’t find you.", enterTime: 6.1, exitTime: 9.7},
@@ -2384,7 +2384,7 @@ export const femaleEndingTwoTextTiming =[
 ]
 export const nonBinaryEndingTwoTextTiming =[
         
-    {id:1, speaker:'investigator', text:"Fine. Get out, quickly.", enterTime: 0, exitTime: 4.15},
+    {id:1, speaker:'investigator', text:"Fine. Get out, quickly.", enterTime: 0.3, exitTime: 4.15},
     {id:2, speaker:'weaver', text:"What?", enterTime: 3, exitTime: 5.45},
     {id:3, speaker:'investigator', text:"Leave. I’ll say you surprised me and got", enterTime: 3.82, exitTime: 8.37},
     {id:4, speaker:'investigator', text:"away, that I couldn’t find you.", enterTime: 6.2, exitTime: 10.15},
@@ -2406,7 +2406,7 @@ export const nonBinaryEndingTwoTextTiming =[
 ]
 export const maleEndingTwoTextTiming =[
         
-    {id:1, speaker:'investigator', text:"Fine. Get out, quickly.", enterTime: 0, exitTime: 4.1},
+    {id:1, speaker:'investigator', text:"Fine. Get out, quickly.", enterTime: 0.3, exitTime: 4.1},
     {id:2, speaker:'weaver', text:"What?", enterTime: 2.5, exitTime: 5},
     {id:3, speaker:'investigator', text:"Leave. I’ll say you surprised me and got", enterTime: 3, exitTime: 7.7},
     {id:4, speaker:'investigator', text:"away, that I couldn’t find you.", enterTime: 5.7, exitTime: 9.8},
@@ -2440,7 +2440,7 @@ export const femaleChoiceTextData =[
     {id:7, text:"Do you check the email now?", questionOne:"Yes, it might be important ", questionTwo:"No, if it was that important it would be a phone call ", time:290,},
     {id:8, text:"What do you think? What will you do?", questionOne:"While the weaver made some good points, the weaver is still enough in the wrong to warrant further investigation and maybe a trial, you arrest the weaver.", questionTwo:"The weaver seems genuine and made some good points, this doesn’t feel quite right to you, you let the weaver go", time:834,},
     {id:9, text:"non", questionOne:"non", questionTwo:"non", time:3600,},
-    {id:10, text:"Is this the way to do it?", questionOne:"Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others.", questionTwo:"No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk. ", time:49,},
+    {id:10, text:"Is this the way to do it?", questionOne:"Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others.", questionTwo:"No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk.", time:49,},
    
 
 ]
@@ -2455,7 +2455,7 @@ export const maleChoiceTextData =[
     {id:7, text:"Do you check the email now?", questionOne:"Yes, it might be important ", questionTwo:"No, if it was that important it would be a phone call ", time:267,},
     {id:8, text:"What do you think? What will you do?", questionOne:"While the weaver made some good points, the weaver is still enough in the wrong to warrant further investigation and maybe a trial, you arrest the weaver.", questionTwo:"The weaver seems genuine and made some good points, this doesn’t feel quite right to you, you let the weaver go", time:713,},
     {id:9, text:"non", questionOne:"non", questionTwo:"non", time:3600,},
-    {id:10, text:"Is this the way to do it?", questionOne:"Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others.", questionTwo:"No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk. ", time:49,},
+    {id:10, text:"Is this the way to do it?", questionOne:"Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others.", questionTwo:"No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk.", time:49,},
    
 
 ]
@@ -2470,7 +2470,7 @@ export const nonBinaryChoiceTextData =[
     {id:7, text:"Do you check the email now?", questionOne:"Yes, it might be important ", questionTwo:"No, if it was that important it would be a phone call ", time:266,},
     {id:8, text:"What do you think? What will you do?", questionOne:"While the weaver made some good points, the weaver is still enough in the wrong to warrant further investigation and maybe a trial, you arrest the weaver.", questionTwo:"The weaver seems genuine and made some good points, this doesn’t feel quite right to you, you let the weaver go", time:699,},
     {id:9, text:"non", questionOne:"non", questionTwo:"non", time:3600,},
-    {id:10, text:"Is this the way to do it?", questionOne:"Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others.", questionTwo:"No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk. ", time:49,},
+    {id:10, text:"Is this the way to do it?", questionOne:"Yes, you still believe the murdered deserve justice and these investigations are worthwhile. You’ll keep investigating and will arrest others.", questionTwo:"No, you care about justice, but don’t want to be part of it anymore. You might not find another job as well paying as this, but you’ll take that risk.", time:49,},
    
 
 ]
