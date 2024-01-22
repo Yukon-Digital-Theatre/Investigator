@@ -1028,8 +1028,8 @@ export const nonBinaryGoingWithTheFlowTextTiming =[
     {id:238, speaker:'investigator', text:"Who gives you the yarn?", enterTime: 825.6, exitTime: 828.8},
     {id:239, speaker:'weaver', text:"I really don’t think I can answer any more of your questions about these.", enterTime: 827.8, exitTime: 832.5},
     {id:240, speaker:'weaver', text:"And I shouldn’t. Leave your card, and I’ll get back to you.", enterTime: 830.5, exitTime: 835.4},
-    {id:241, speaker:'narrator', text:"The weaver keeps weaving. You know it’s time to be more honest.", enterTime: 834.3, exitTime: 840.7},
-    {id:242, speaker:'choice', text:"Continue", enterTime: 841, exitTime: 842.5},
+    {id:241, speaker:'narrator', text:"The weaver keeps weaving. You know it’s time to be more honest.", enterTime: 834.3, exitTime: 839.7},
+    {id:242, speaker:'choice', text:"Continue", enterTime: 839, exitTime: 842.5},
 ]
 
  //---//
@@ -1157,7 +1157,7 @@ export const maleDownToBusinessTextTiming =[
     {id:37, speaker:'weaver', text: "always before noon, but it’s been just over two weeks since the last one, it", enterTime: 93.7, exitTime: 99.6},
     {id:38, speaker:'weaver', text:"took them three weeks once (coughs). Payment is middle of the month.", enterTime: 97.6, exitTime: 103.5},
     {id:39, speaker:'investigator', text:"How heavy is each package of yarn?", enterTime: 101.8, exitTime: 106.4},
-    {id:40, speaker:'weaver', text:"Each package is 20 kilos. (coughs)", enterTime: 105, exitTime: 101.2},
+    {id:40, speaker:'weaver', text:"Each package is 20 kilos. (coughs)", enterTime: 105, exitTime: 111.2},
     {id:41, speaker:'investigator', text:"You finish it in two weeks?", enterTime: 108.2, exitTime: 112},
     {id:42, speaker:'weaver', text:"Not really. I try to finish it in two weeks, but never really do. It’s piled up a", enterTime: 111.1, exitTime: 116.6},
     {id:43, speaker:'weaver', text:"bit recently, I can probably keep going for another five to seven days with", enterTime: 114.6, exitTime: 120.4},
@@ -1248,7 +1248,7 @@ export const maleKeepGoingTextTiming =[
     {id:43, speaker:'weaver', text:"Rent a little place. Sleep as long as I want. Go wander outside…", enterTime: 140.78, exitTime: 147.08},
     {id:44, speaker:'investigator', text:"You really don’t know what it’s made out of?", enterTime: 145.60, exitTime: 149.80},
     {id:45, speaker:'weaver', text:"No.", enterTime: 148.39, exitTime: 151.17},
-    {id:46, speaker:'choice', text:"Continue", enterTime: 152, exitTime: 153},
+    {id:46, speaker:'choice', text:"Continue", enterTime: 149, exitTime: 153},
 ]  
 export const femaleKeepGoingTextTiming =[
         
@@ -2070,7 +2070,7 @@ export const maleAdmissionTextTiming =[
     {id:73, speaker:'narrator', text:"All the numbers are written there clearly, all the way up to 281,600", enterTime: 343.2, exitTime: 352},
     {id:74, speaker:'narrator', text:"281,600 by January 2020", enterTime: 350.68, exitTime: 358.08},
     {id:75, speaker:'narrator', text:"You read it again: January 2020. Almost two years ago. Before what happened in Gikana.", enterTime: 357.35, exitTime: 368},
-    {id:76, speaker:'narrator', text:"Before Vukelongo was built. Before so many more deaths.", enterTime: 366., exitTime: 273.53},
+    {id:76, speaker:'narrator', text:"Before Vukelongo was built. Before so many more deaths.", enterTime: 366., exitTime: 373.53},
     {id:77, speaker:'weaver', text: "Uh, you’ll need Officer Lee’s card won’t you. That’s who you really need to", enterTime: 373.21, exitTime: 378.8},
     {id:78, speaker:'weaver', text:"talk to, find out who’s responsible –", enterTime: 376.8, exitTime: 380.56},
     {id:79, speaker:'investigator', text:"We’ll find it ourselves. I’m going to need", enterTime: 378.56, exitTime: 383},
@@ -2163,7 +2163,7 @@ export const maleAdmissionTextTiming =[
     {id:166, speaker:'investigator', text:"but you knew, on some level you knew,", enterTime: 675.23, exitTime: 682},
     {id:167, speaker:'investigator', text:"you kept going. Wouldn’t you say that makes", enterTime: 680, exitTime: 684.7},
     {id:168, speaker:'investigator', text:"you worthy of investigating? Don’t you feel", enterTime: 682.7, exitTime: 687.71},
-    {id:169, speaker:'investigator', text:"guilty, or at least bad about it?", enterTime: 685.71, exitTime: 670},
+    {id:169, speaker:'investigator', text:"guilty, or at least bad about it?", enterTime: 685.71, exitTime: 690},
     {id:170, speaker:'weaver', text:"Of course I feel bad. I, I feel…I wish that, that the yarn hadn’t", enterTime: 688, exitTime: 695.15},
     {id:171, speaker:'weaver', text:"been…it makes me sick. But, it’s not fair to blame me for not going to", enterTime: 693.15, exitTime: 699.36},
     {id:172, speaker:'weaver', text:"someone, I couldn’t have changed anything. Who would believe me,", enterTime: 697.36, exitTime: 703.3},
