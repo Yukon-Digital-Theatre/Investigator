@@ -1736,7 +1736,7 @@ export const maleBreakItDownTextTiming =[
     {id:21, speaker:'weaver', text:"No, that’s not... I just, I don’t understand", enterTime: 42.6, exitTime: 47.3},
     {id:22, speaker:'investigator', text:"How much does a cone weigh?", enterTime: 44.7, exitTime: 48.9},
     {id:23, speaker:'weaver', text:"One kilo", enterTime: 47.9, exitTime: 50.6},
-    {id:24, speaker:'imv', text:"How much hair does an average person have", enterTime: 48.7, exitTime: 53.5},
+    {id:24, speaker:'investigator', text:"How much hair does an average person have", enterTime: 48.7, exitTime: 53.5},
     {id:25, speaker:'weaver', text:"I don’t know", enterTime: 51.5, exitTime: 54.3},
     {id:26, speaker:'investigator', text:"Guess", enterTime: 52.3, exitTime: 55.1},
     {id:27, speaker:'weaver', text:"On, on average… the average person, I’d think maybe, maybe about,", enterTime: 53.8, exitTime: 60.5},
