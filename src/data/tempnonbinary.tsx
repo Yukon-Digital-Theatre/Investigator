@@ -377,12 +377,12 @@ export const nonBinaryBreakItDownTextTiming =[
     {id:85, speaker:'investigator', text:"they did.", enterTime: 242.9, exitTime: 245.9},
     {id:86, speaker:'narrator', text:"The Weaver is speechless, searching for words.", enterTime: 245.7, exitTime: 250.6},
     {id:87, speaker:'narrator', text:"You’re caught in the memories, especially the smell", enterTime: 249.4, exitTime: 254.3},
-    {id:87, speaker:'narrator', text:"You try to shake free and focus on the Weaver", enterTime: 253.4, exitTime: 258.4},
+    {id:88, speaker:'narrator', text:"You try to shake free and focus on the Weaver", enterTime: 253.4, exitTime: 258.4},
     {id:89, speaker:'narrator', text:"You feel your phone buzz in your pocket. Another email.", enterTime: 257.3, exitTime: 263.3},
     {id:90, speaker:'narrator', text:"The Weaver is on the verge of saying more.", enterTime: 261.8, exitTime: 266.4},
     {id:91, speaker:'narrator', text:"Do you check the email now?", enterTime: 266.1, exitTime: 3600},
     {id:92, speaker:'choice', text:"Yes, it might be important", enterTime: 268.6, exitTime: 3600},
-    {id:93, speaker:'choice', text:"No, if it was that important it would be a phone call", enterTime: 271.3, exitTime: 3600},
+    {id:93, speaker:'choice', text:"No, if it was that important it would be a phone call", enterTime: 268.7, exitTime: 3600},
    
 
    
