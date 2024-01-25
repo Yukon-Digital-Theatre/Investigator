@@ -92,7 +92,7 @@ export const EndingTwoBTextTiming =[
     {id:10, speaker:"narrator", text:"You begin to leave, but before you do, you think to look around the workshop and weaver’s room for food.",enterTime: 0, exitTime: 0},
     {id:11, speaker:"narrator", text:"There isn’t much, but you find some bread and a few snacks that will be easy to carry.",enterTime: 0, exitTime: 0},
     {id:12, speaker:"narrator", text:"Waste not want not.",enterTime: 0, exitTime: 0},
-    {id:13, speaker:"narrator", text:"You begin to choke on the fiber dust.",enterTime: 0, exitTime: 0},
+    {id:13, speaker:"narrator", text:"You begin to choke on the fibre dust.",enterTime: 0, exitTime: 0},
     {id:14, speaker:"narrator", text:"You leave as quickly as you can.",enterTime: 0, exitTime: 0},
     {id:1111, speaker:"choice", text:"What now?",enterTime: 0, exitTime: 0},
 
