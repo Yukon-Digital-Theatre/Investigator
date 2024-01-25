@@ -38,7 +38,7 @@ function helper(){
 </p> 
 <p className='introText outlineText fadeIn' style={style?{"animationName":"fade-out"}:{"animationName":"fade-in"}}>  While most will complete the experience within 60 minutes, if certain choices are selected it could take up to 70 mintues. The experience is over when you reach an end menu. 
 
-</p> <p className='introText outlineText fadeIn' style={style?{"animationName":"fade-out"}:{"animationName":"fade-in"}}>. If you get stuck along the way or experience other issues please email so we can correct the glitch: 
+</p> <p className='introText outlineText fadeIn' style={style?{"animationName":"fade-out"}:{"animationName":"fade-in"}}>If you get stuck along the way or experience other issues please email so we can correct the glitch: 
 
 </p>
 

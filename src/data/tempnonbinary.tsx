@@ -8,7 +8,7 @@ export const nonBinaryDownToBusinessTextTiming =[
     {id:6, speaker:'investigator', text:"Investigation Council. Here’s my badge.", enterTime: 12.0, exitTime: 16.7},
     {id:7, speaker:'weaver', text:"Okay. So…(coughs) I’m sorry, what does this mean?", enterTime: 15.3, exitTime: 19.9},
     {id:8, speaker:'investigator', text:"Can you open up the window? I see what you", enterTime: 18.9, exitTime: 23.2},
-    {id:9, speaker:'investigator', text:"mean about the fibre dust", enterTime: 21.2, exitTime: 24.6},
+    {id:9, speaker:'investigator', text:"mean about the fiber dust", enterTime: 21.2, exitTime: 24.6},
     {id:10, speaker:'weaver', text:"Um, no I, I’m sorry, the window doesn’t open. Am, am I in trouble?", enterTime: 23.5, exitTime: 27.2},
     {id:11, speaker:'weaver', text:"Has, has someone said that I’ve…", enterTime: 28.2, exitTime: 34.5},
     {id:12, speaker:'investigator', text:"I’d like to hear more about these carpets,", enterTime: 30.5, exitTime: 35.9},
@@ -91,7 +91,7 @@ export const nonBinaryKeepGoingTextTiming =[
     {id:5, speaker:'weaver', text:"No, I haven’t thought about it, not really.", enterTime: 9.36, exitTime: 14.02},
     {id:6, speaker:'investigator', text:"You look at it every day", enterTime: 12.33, exitTime: 15.47},
     {id:7, speaker:'weaver', text:"I know, but it’s just yarn, some type of coarse yarn that’s definitely a mix of", enterTime: 14.19, exitTime: 19.91},
-    {id:8, speaker:'weaver', text:"fibres, that’s as much as I can tell.", enterTime: 18.21, exitTime: 21.68},
+    {id:8, speaker:'weaver', text:"fibers, that’s as much as I can tell.", enterTime: 18.21, exitTime: 21.68},
     {id:9, speaker:'investigator', text:"I can’t believe you’ve never thought more about it", enterTime: 20.68, exitTime: 24.22},
     {id:10, speaker:'weaver', text:"(The weaver gradually picks up their weaving speed.)", enterTime: 23.2, exitTime: 25.7},
     {id:11, speaker:'weaver', text:"Look, I’ve been doing this long enough that I don’t need to think about it.", enterTime: 24.10, exitTime: 29.45},
@@ -149,10 +149,10 @@ export const nonBinaryNewTacticTextTiming =[
     {id:4, speaker:'weaver', text:"Well, well it’s definitely a mix. This, this is rough, so probably some type of", enterTime: 9.3, exitTime: 15.4},
 
 
-    {id:5, speaker:'weaver', text:"poor quality wool, some plant or vegetable fibre too. Cotton is common.", enterTime: 15, exitTime: 20.7},
+    {id:5, speaker:'weaver', text:"poor quality wool, some plant or vegetable fiber too. Cotton is common.", enterTime: 15, exitTime: 20.7},
 
 
-    {id:6, speaker:'weaver', text:"Honestly, it’s probably a mix of the cheapest fibres they could find. It’s", enterTime: 20.3, exitTime: 24.6},
+    {id:6, speaker:'weaver', text:"Honestly, it’s probably a mix of the cheapest fibers they could find. It’s", enterTime: 20.3, exitTime: 24.6},
 
 
     {id:7, speaker:'weaver', text:"meant for office carpet, not palaces or other places people with money go.", enterTime: 24.2, exitTime: 29.2},
@@ -161,10 +161,10 @@ export const nonBinaryNewTacticTextTiming =[
     {id:8, speaker:'weaver', text:"Seems to me anyways. (coughs)", enterTime: 28.8, exitTime: 31.5},
 
 
-    {id:9, speaker:'investigator', text:"You believe it’s just wool or plant fibre", enterTime: 31.1, exitTime: 33.71},
+    {id:9, speaker:'investigator', text:"You believe it’s just wool or plant fiber", enterTime: 31.1, exitTime: 33.71},
 
 
-    {id:10, speaker:'weaver', text:"I, I believe it’s wool and plant fibre as much as I can believe something I", enterTime: 33.7, exitTime: 38},
+    {id:10, speaker:'weaver', text:"I, I believe it’s wool and plant fiber as much as I can believe something I", enterTime: 33.7, exitTime: 38},
 
 
     {id:11, speaker:'weaver', text:"have no way of knowing. (coughs) Really, what I believe is that I don’t know,", enterTime: 37.4, exitTime: 42.8},
@@ -218,7 +218,7 @@ export const nonBinaryNewTacticTextTiming =[
     {id:27, speaker:'weaver', text:"country for that. I’m no traveler. You said your last question was about the,", enterTime: 79, exitTime: 83.8},
 
 
-    {id:28, speaker:'weaver', text:"the raw fibre in the yarn. I gave you a good guess and answered several more", enterTime: 83.4, exitTime: 88},
+    {id:28, speaker:'weaver', text:"the raw fiber in the yarn. I gave you a good guess and answered several more", enterTime: 83.4, exitTime: 88},
 
 
     {id:29, speaker:'weaver', text:"questions too. I just really need to focus to get this done.", enterTime: 87.6, exitTime: 91.31},
@@ -380,16 +380,16 @@ export const nonBinaryNewTacticTextTiming =[
     {id:81, speaker:'weaver', text:"I did –", enterTime: 239.9, exitTime: 241.2},
 
 
-    {id:82, speaker:'investigator', text:"Other fibres would strengthen it, you said it", enterTime: 240.9, exitTime: 243.5},
+    {id:82, speaker:'investigator', text:"Other fibers would strengthen it, you said it", enterTime: 240.9, exitTime: 243.5},
 
 
-    {id:83, speaker:'investigator', text:"was mixed fibres, doesn’t that mean it’s", enterTime: 243.1, exitTime: 245.6},
+    {id:83, speaker:'investigator', text:"was mixed fibers, doesn’t that mean it’s", enterTime: 243.1, exitTime: 245.6},
 
 
     {id:84, speaker:'investigator', text:"possible", enterTime: 245.2, exitTime: 246.6},
 
 
-    {id:85, speaker:'weaver', text:"Fine, yes I admit if you mixed fibres, sure. (coughs) You could make a yarn", enterTime: 246.4, exitTime: 252.1},
+    {id:85, speaker:'weaver', text:"Fine, yes I admit if you mixed fibers, sure. (coughs) You could make a yarn", enterTime: 246.4, exitTime: 252.1},
 
 
     {id:86, speaker:'weaver', text:"that…well…", enterTime: 251.7, exitTime: 253.6},
@@ -710,7 +710,7 @@ export const EndingTwoBTextTiming =[
     {id:10, speaker:"narrator", text:"You begin to leave, but before you do, you think to look around the workshop and weaver’s room for food.",enterTime: 40.3, exitTime: 47.4},
     {id:11, speaker:"narrator", text:"There isn’t much, but you find some bread and a few snacks that will be easy to carry.",enterTime: 47.9, exitTime: 54},
     {id:12, speaker:"narrator", text:"Waste not want not.",enterTime: 54.3, exitTime: 56.7},
-    {id:13, speaker:"narrator", text:"You begin to choke on the fibre dust.",enterTime: 57.9, exitTime: 60.7},
+    {id:13, speaker:"narrator", text:"You begin to choke on the fiber dust.",enterTime: 57.9, exitTime: 60.7},
     {id:14, speaker:"narrator", text:"You leave as quickly as you can.",enterTime: 60.8, exitTime: 63.9},
     {id:1111, speaker:"choice", text:"What now?",enterTime: 64.4, exitTime: 3600},
 
