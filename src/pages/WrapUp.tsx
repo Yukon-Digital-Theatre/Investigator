@@ -35,9 +35,11 @@ const [style9, setStyle9] = useState(wrapUpVisited||!narratorMode);
   }
   function helper4(): void {
 
-    Howler.stop();
-    dispatch(updateWrapUpVisited(false))
-    dispatch(updatePage("Intro"));
+  
+  
+     
+    dispatch(updateWrapUpVisited(false));
+    window.location.reload();
     
   }
   function helper5(): void {
